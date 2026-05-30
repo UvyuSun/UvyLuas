@@ -48,7 +48,7 @@ function init_gear_sets()
 	sets.buff.Entrust = {
     main={ name="Gada", augments={'Indi. eff. dur. +11','MND+5','"Mag.Atk.Bns."+17',}},
     sub="Ammurapi Shield",
-    range={ name="Dunna", augments={'MP+20','Mag. Acc.+10','"Fast Cast"+3',}},
+    ammo="Staunch Tathlum +1",
     head="Azimuth Hood +3",
     body="Azimuth Coat +3",
     hands={ name="Nyame Gauntlets", augments={'Path: B',}},
@@ -63,10 +63,11 @@ function init_gear_sets()
     back={ name="Lifestream Cape", augments={'Geomancy Skill +10','Indi. eff. dur. +20','Pet: Damage taken -2%',}},
 }	
 	sets.precast.FC = { 
+    ammo="Staunch Tathlum +1",
     head={ name="Merlinic Hood", augments={'Mag. Acc.+2','"Fast Cast"+7',}},                                                                --15
     body="Adamantite Armor",                                                                                                                --0
     hands={ name="Agwu's Gages", augments={'Path: A',}},                                                                                    --6
-    legs="Geomancy Pants +3",                                                                                                               --15
+    legs="Geomancy Pants +4",                                                                                                               --15
     feet={ name="Merlinic Crackows", augments={'Mag. Acc.+15 "Mag.Atk.Bns."+15','"Fast Cast"+7','INT+1',}},                                 --12
     neck="Orunmila's Torque",                                                                                                               --5
     waist="Embla Sash",                                                                                                                     --5
@@ -89,7 +90,7 @@ function init_gear_sets()
     sets.precast.FC.Stoneskin = set_combine(sets.precast.FC['Enhancing Magic'], {})
 
     sets.precast.FC.Impact = {
-	range={ name="Dunna", augments={'MP+20','Mag. Acc.+10','"Fast Cast"+3',}},
+    ammo="Staunch Tathlum +1",
 	head=empty,
     body="Twilight Cloak",
     hands={ name="Agwu's Gages", augments={'Path: A',}},
@@ -230,24 +231,24 @@ function init_gear_sets()
 	--------------------------------------
 
     sets.midcast.FastRecast = {
-    range={ name="Dunna", augments={'MP+20','Mag. Acc.+10','"Fast Cast"+3',}},
-    head={ name="Merlinic Hood", augments={'Mag. Acc.+2','"Fast Cast"+7',}},
-    body="Adamantite Armor",
-    hands={ name="Agwu's Gages", augments={'Path: A',}},
-    legs="Geomancy Pants +3",
-    feet="Azimuth Gaiters +3",
-    neck="Null Loop",
-    waist="Embla Sash",
-    left_ear="Malignance Earring",
-    right_ear={ name="Azimuth Earring +1", augments={'System: 1 ID: 1676 Val: 0','Mag. Acc.+14','Damage taken-5%',}},
-    left_ring="Defending Ring",
-    right_ring="Kishar Ring",
-    back={ name="Nantosuelta's Cape", augments={'HP+60','Mag. Acc+20 /Mag. Dmg.+20','Mag. Acc.+10','"Fast Cast"+10','Damage taken-5%',}},
-}
+    ammo="Staunch Tathlum +1",
+    head={ name="Merlinic Hood", augments={'Mag. Acc.+2','"Fast Cast"+7',}},                                                                --15
+    body="Adamantite Armor",                                                                                                                --0
+    hands={ name="Agwu's Gages", augments={'Path: A',}},                                                                                    --6
+    legs="Geomancy Pants +4",                                                                                                               --15
+    feet={ name="Merlinic Crackows", augments={'Mag. Acc.+15 "Mag.Atk.Bns."+15','"Fast Cast"+7','INT+1',}},                                 --12
+    neck="Orunmila's Torque",                                                                                                               --5
+    waist="Embla Sash",                                                                                                                     --5
+    left_ear="Malignance Earring",                                                                                                          --4
+    right_ear="Loquac. Earring",                                                                                                            --2
+    left_ring="Rahab Ring",                                                                                                                 --2
+    right_ring="Kishar Ring",                                                                                                               --2
+    back={ name="Nantosuelta's Cape", augments={'HP+60','Mag. Acc+20 /Mag. Dmg.+20','Mag. Acc.+10','"Fast Cast"+10','Damage taken-5%',}},   --10
+}                                                                                                                                           --Total FC 80%
 	sets.midcast.Geomancy = {
     main={ name="Idris", augments={'Path: A',}},
     sub="Ammurapi Shield",
-    range={ name="Dunna", augments={'MP+20','Mag. Acc.+10','"Fast Cast"+3',}},
+    ammo="Staunch Tathlum +1",
     head="Azimuth Hood +3",
     body="Azimuth Coat +3",
     hands={ name="Nyame Gauntlets", augments={'Path: B',}},
@@ -265,7 +266,7 @@ function init_gear_sets()
 	sets.midcast.Geomancy.Indi = {
     main={ name="Idris", augments={'Path: A',}},
     sub="Ammurapi Shield",
-    range={ name="Dunna", augments={'MP+20','Mag. Acc.+10','"Fast Cast"+3',}},
+    ammo="Staunch Tathlum +1",
     head="Azimuth Hood +3",
     body="Azimuth Coat +3",
     hands={ name="Nyame Gauntlets", augments={'Path: B',}},
@@ -448,10 +449,10 @@ function init_gear_sets()
     back={ name="Nantosuelta's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Damage taken-5%',}},
 }		
     sets.midcast['Dark Magic'] = {
-    range={ name="Dunna", augments={'MP+20','Mag. Acc.+10','"Fast Cast"+3',}},
+    ammo="Pemphredo Tathlum",
     head="Azimuth Hood +3",
     body="Azimuth Coat +3",
-    hands="Geo. Mitaines +3",
+    hands="Geo. Mitaines +4",
     legs="Azimuth Tights +3",
     feet="Azimuth Gaiters +3",
     neck="Null Loop",
@@ -478,7 +479,7 @@ function init_gear_sets()
     back={ name="Nantosuelta's Cape", augments={'HP+60','Mag. Acc+20 /Mag. Dmg.+20','Mag. Acc.+10','"Fast Cast"+10','Damage taken-5%',}},
 }
     sets.midcast.Drain = {
-    range={ name="Dunna", augments={'MP+20','Mag. Acc.+10','"Fast Cast"+3',}},
+    ammo="Pemphredo Tathlum",
     head={ name="Bagua Galero +3", augments={'Enhances "Primeval Zeal" effect',}},
     body="Azimuth Coat +3",
     hands={ name="Agwu's Gages", augments={'Path: A',}},
@@ -497,10 +498,10 @@ function init_gear_sets()
 	sets.midcast.Stun = {
     main={ name="Idris", augments={'Path: A',}},
     sub="Maxentius",
-    range={ name="Dunna", augments={'MP+20','Mag. Acc.+10','"Fast Cast"+3',}},
+    ammo="Pemphredo Tathlum",
     head="Azimuth Hood +3",
     body="Azimuth Coat +3",
-    hands="Geo. Mitaines +3",
+    hands="Geo. Mitaines +4",
     legs="Azimuth Tights +3",
     feet="Azimuth Gaiters +3",
     neck="Null Loop",
@@ -514,10 +515,10 @@ function init_gear_sets()
 	sets.midcast.Stun.Burst = {
     main={ name="Idris", augments={'Path: A',}},
     sub="Maxentius",
-    range={ name="Dunna", augments={'MP+20','Mag. Acc.+10','"Fast Cast"+3',}},
+    ammo="Pemphredo Tathlum",
     head="Azimuth Hood +3",
     body="Azimuth Coat +3",
-    hands="Geo. Mitaines +3",
+    hands="Geo. Mitaines +4",
     legs="Azimuth Tights +3",
     feet="Azimuth Gaiters +3",
     neck="Null Loop",
@@ -532,7 +533,7 @@ function init_gear_sets()
     ammo="Pemphredo Tathlum",
 	head=empty,
     body="Twilight Cloak",
-    hands="Geo. Mitaines +3",
+    hands="Geo. Mitaines +4",
     legs="Azimuth Tights +3",
     feet="Azimuth Gaiters +3",
     neck="Null Loop",
@@ -650,8 +651,8 @@ function init_gear_sets()
 
 	-- Resting sets
 	sets.resting = {
-    main="Chatoyant Staff",
-    sub="Oneiros Grip",
+    main={ name="Idris", augments={'Path: A',}},
+    sub="Ammurapi Shield",
     ammo="Staunch Tathlum +1",
     head="Azimuth Hood +3",
     body="Azimuth Coat +3",
@@ -670,7 +671,7 @@ function init_gear_sets()
     sets.idle.Town = {
     main={ name="Idris", augments={'Path: A',}},
     sub="Os. Escutcheon",
-    range={ name="Dunna", augments={'MP+20','Mag. Acc.+10','"Fast Cast"+3',}},
+    ammo="Staunch Tathlum +1",
     head={ name="Agwu's Cap", augments={'Path: A',}},
     body="Adamantite Armor",
     hands="Regal Cuffs",
@@ -721,6 +722,7 @@ function init_gear_sets()
     sub={ name="Makhila +3", augments={'TP Bonus +1000',}},
     ammo="Staunch Tathlum +1",
     head="Azimuth Hood +3",
+    head="Azimuth Hood +3",
     body="Azimuth Coat +3",
     hands={ name="Bagua Mitaines +3", augments={'Enhances "Curative Recantation" effect',}},
     legs={ name="Agwu's Slops", augments={'Path: A',}},
@@ -739,7 +741,7 @@ function init_gear_sets()
     ammo="Staunch Tathlum +1",
     head="Null Masque",
     body="Adamantite Armor",
-    hands="Geo. Mitaines +3",
+    hands="Geo. Mitaines +4",
     legs="Jhakri Slops +2",
     feet="Mallquis Clogs +2",
     neck="Rep. Plat. Medal",
@@ -756,7 +758,7 @@ function init_gear_sets()
     ammo="Staunch Tathlum +1",
     head="Azimuth Hood +3",
     body="Adamantite Armor",
-    hands="Geo. Mitaines +3",
+    hands="Geo. Mitaines +4",
     legs="Jhakri Slops +2",
     feet="Mallquis Clogs +2",
     neck="Rep. Plat. Medal",
@@ -774,10 +776,10 @@ function init_gear_sets()
 	sets.idle.Pet = {
     main={ name="Idris", augments={'Path: A',}},
     sub="Ammurapi Shield",
-    range={ name="Dunna", augments={'MP+20','Mag. Acc.+10','"Fast Cast"+3',}},
+    ammo="Staunch Tathlum +1",
     head="Azimuth Hood +3",
     body="Adamantite Armor",
-    hands="Geo. Mitaines +3",
+    hands="Geo. Mitaines +4",
     legs={ name="Agwu's Slops", augments={'Path: A',}},
     feet={ name="Bagua Sandals +3", augments={'Enhances "Radial Arcana" effect',}},
     neck={ name="Bagua Charm +2", augments={'Path: A',}},
@@ -794,7 +796,7 @@ function init_gear_sets()
     ammo="Staunch Tathlum +1",
     head="Azimuth Hood +3",
     body="Adamantite Armor",
-    hands="Geo. Mitaines +3",
+    hands="Geo. Mitaines +4",
     legs={ name="Agwu's Slops", augments={'Path: A',}},
     feet={ name="Bagua Sandals +3", augments={'Enhances "Radial Arcana" effect',}},
     neck={ name="Bagua Charm +2", augments={'Path: A',}},
@@ -811,7 +813,7 @@ function init_gear_sets()
     ammo="Staunch Tathlum +1",
     head="Null Masque",
     body="Adamantite Armor",
-    hands="Geo. Mitaines +3",
+    hands="Geo. Mitaines +4",
     legs="Jhakri Slops +2",
     feet="Mallquis Clogs +2",
     neck="Rep. Plat. Medal",
@@ -828,7 +830,7 @@ function init_gear_sets()
     ammo="Staunch Tathlum +1",
     head="Azimuth Hood +3",
     body="Adamantite Armor",
-    hands="Geo. Mitaines +3",
+    hands="Geo. Mitaines +4",
     legs="Jhakri Slops +2",
     feet="Mallquis Clogs +2",
     neck="Rep. Plat. Medal",
@@ -845,7 +847,7 @@ function init_gear_sets()
 	sets.idle.Weak = {
     main="Idris",
     sub="Ammurapi Shield",
-    range={ name="Dunna", augments={'MP+20','Mag. Acc.+10','"Fast Cast"+3',}},
+    ammo="Staunch Tathlum +1",
     head={ name="Nyame Helm", augments={'Path: B',}},
     body="Adamantite Armor",
     hands={ name="Nyame Gauntlets", augments={'Path: B',}},
@@ -879,10 +881,10 @@ function init_gear_sets()
 	sets.idle.AminonT.Weak = {
     main={ name="Tishtrya", augments={'Path: A',}},
     sub="Ammurapi Shield",
-    range={ name="Dunna", augments={'MP+20','Mag. Acc.+10','"Fast Cast"+3',}},
+    ammo="Staunch Tathlum +1",
     head="Azimuth Hood +3",
     body="Adamantite Armor",
-    hands="Geo. Mitaines +3",
+    hands="Geo. Mitaines +4",
     legs="Jhakri Slops +2",
     feet="Mallquis Clogs +2",
     neck="Rep. Plat. Medal",
@@ -896,10 +898,10 @@ function init_gear_sets()
 	sets.idle.AminonM.Weak = {
     main="Maxentius",
     sub="Ammurapi Shield",
-    range={ name="Dunna", augments={'MP+20','Mag. Acc.+10','"Fast Cast"+3',}},
+    ammo="Staunch Tathlum +1",
     head="Azimuth Hood +3",
     body="Adamantite Armor",
-    hands="Geo. Mitaines +3",
+    hands="Geo. Mitaines +4",
     legs="Jhakri Slops +2",
     feet="Mallquis Clogs +2",
     neck="Rep. Plat. Medal",
@@ -913,10 +915,10 @@ function init_gear_sets()
 	sets.idle.Weak.Pet = {
     main={ name="Idris", augments={'Path: A',}},
     sub="Ammurapi Shield",
-    range={ name="Dunna", augments={'MP+20','Mag. Acc.+10','"Fast Cast"+3',}},
+    ammo="Staunch Tathlum +1",
     head={ name="Nyame Helm", augments={'Path: B',}},
     body="Adamantite Armor",
-    hands="Geo. Mitaines +3",
+    hands="Geo. Mitaines +4",
     legs={ name="Nyame Flanchard", augments={'Path: B',}},
     feet={ name="Nyame Sollerets", augments={'Path: B',}},
     neck={ name="Bagua Charm +2", augments={'Path: A',}},
@@ -931,10 +933,10 @@ function init_gear_sets()
 	sets.idle.AminonT.Weak.Pet = {
     main={ name="Tishtrya", augments={'Path: A',}},
     sub="Ammurapi Shield",
-    range={ name="Dunna", augments={'MP+20','Mag. Acc.+10','"Fast Cast"+3',}},
+    ammo="Staunch Tathlum +1",
     head="Null Masque",
     body="Adamantite Armor",
-    hands="Geo. Mitaines +3",
+    hands="Geo. Mitaines +4",
     legs="Jhakri Slops +2",
     feet="Mallquis Clogs +2",
     neck="Rep. Plat. Medal",
@@ -948,10 +950,10 @@ function init_gear_sets()
 	sets.idle.AminonM.Weak.Pet = {
     main="Maxentius",
     sub="Ammurapi Shield",
-    range={ name="Dunna", augments={'MP+20','Mag. Acc.+10','"Fast Cast"+3',}},
+    ammo="Staunch Tathlum +1",
     head="Azimuth Hood +3",
     body="Adamantite Armor",
-    hands="Geo. Mitaines +3",
+    hands="Geo. Mitaines +4",
     legs="Jhakri Slops +2",
     feet="Mallquis Clogs +2",
     neck="Rep. Plat. Medal",

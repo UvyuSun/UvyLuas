@@ -651,7 +651,7 @@ function init_gear_sets()
 
 	-- Resting sets
 	sets.resting = {
-    main={ name="Idris", augments={'Path: A',}},
+    main={ name="Bhima", augments={'Path: B',}},
     sub="Ammurapi Shield",
     ammo="Staunch Tathlum +1",
     head="Azimuth Hood +3",
@@ -669,7 +669,7 @@ function init_gear_sets()
 }
 	-- Idle sets
     sets.idle.Town = {
-    main={ name="Idris", augments={'Path: A',}},
+    main={ name="Bhima", augments={'Path: B',}},
     sub="Os. Escutcheon",
     ammo="Staunch Tathlum +1",
     head={ name="Agwu's Cap", augments={'Path: A',}},
@@ -701,7 +701,7 @@ function init_gear_sets()
 --    right_ring="Shadow Ring",
 --    back={ name="Nantosuelta's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Damage taken-5%',}},
 	sets.idle = {
-    main={ name="Idris", augments={'Path: A',}},
+    main={ name="Bhima", augments={'Path: B',}},
     sub="Ammurapi Shield",
 	ammo="Staunch Tathlum +1",
     head="Azimuth Hood +3",

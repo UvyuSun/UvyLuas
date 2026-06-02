@@ -38,26 +38,6 @@ function init_gear_sets()
     feet="Volte Boots",
     waist="Chaac Belt",
 }
-    sets.precast.Item['Holy Water'] = {
-	neck="Nicander's Necklace", 
-    left_ring="Blenmot's Ring +1",
-    right_ring="Blenmot's Ring +1",
-}
-    sets.precast.Item['Icarus Wing'] = {
-    ammo="Aurgelmir Orb +1",
-    head={ name="Bunzi's Hat", augments={'Path: A',}},
-    body="Malignance Tabard",
-    hands="Malignance Gloves",
-    legs="Malignance Tights",
-    feet="Malignance Boots",
-    neck="Anu Torque",
-    waist="Goading Belt",
-    left_ear="Telos Earring",
-    right_ear="Dedition Earring",
-    left_ring="Chirich Ring +1",
-    right_ring="Chirich Ring +1",
-    back={ name="Sucellos's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Phys. dmg. taken-10%',}},
-}
 
 	-- Sets for special buff conditions on spells. Precast sets to enhance JAs
 	sets.precast.JA['Chainspell'] = {body="Viti. Tabard +3"}		
@@ -555,22 +535,22 @@ function init_gear_sets()
 	sets.midcast['Phalanx II'] = {
     main={ name="Colada", augments={'Enh. Mag. eff. dur. +4','Mag. Acc.+10','DMG:+3',}},
     sub="Ammurapi Shield",
-    ammo="Sapience Orb",
-    head={ name="Telchine Cap", augments={'"Conserve MP"+5','Enh. Mag. eff. dur. +10',}},
-    body={ name="Viti. Tabard +3", augments={'Enhances "Chainspell" effect',}},
+    ammo="Staunch Tathlum +1",
+    head="Leth. Chappel +3",
+    body="Lethargy Sayon +3",
     hands="Atrophy Gloves +3",
-    legs={ name="Telchine Braconi", augments={'"Conserve MP"+5','Enh. Mag. eff. dur. +10',}},
-    feet="Lethargy Houseaux +3",
+    legs="Leth. Fuseau +3",
+    feet="Leth. Houseaux +3",
     neck={ name="Dls. Torque +2", augments={'Path: A',}},
     waist="Embla Sash",
-    left_ear="Malignance Earring",
+    left_ear={ name="Alabaster Earring", augments={'Path: A',}},
     right_ear={ name="Leth. Earring +1", augments={'System: 1 ID: 1676 Val: 0','Accuracy+12','Mag. Acc.+12','"Dbl.Atk."+4',}},
     left_ring="Defending Ring",
     right_ring="Murky Ring",
     back={ name="Ghostfyre Cape", augments={'Enfb.mag. skill +1','Enha.mag. skill +10','Mag. Acc.+3','Enh. Mag. eff. dur. +20',}},
 }
 	sets.midcast.Enspell = {
-    main="Pukulatmuj +1",
+    main="Archduke's Sword",
     sub={ name="Forfend +1", augments={'Path: A',}},
     ammo="Staunch Tathlum +1",
     head="Befouled Crown",
@@ -1130,7 +1110,7 @@ function init_gear_sets()
 
     sets.midcast['Elemental Magic'] = {
     main={ name="Bunzi's Rod", augments={'Path: A',}},
-    sub="Ammurapi Shield",
+    sub="Maxentius",
     ammo={ name="Ghastly Tathlum +1", augments={'Path: A',}},
     head="Leth. Chappel +3",
     body="Lethargy Sayon +3",
@@ -1147,7 +1127,7 @@ function init_gear_sets()
 }
     sets.midcast['Elemental Magic'].Burst = {
     main={ name="Bunzi's Rod", augments={'Path: A',}},
-    sub="Ammurapi Shield",
+    sub="Maxentius",
     ammo={ name="Ghastly Tathlum +1", augments={'Path: A',}},
     head="Leth. Chappel +3",
     body="Lethargy Sayon +3",

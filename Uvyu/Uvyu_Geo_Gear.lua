@@ -90,7 +90,7 @@ function init_gear_sets()
     sets.precast.FC.Stoneskin = set_combine(sets.precast.FC['Enhancing Magic'], {})
 
     sets.precast.FC.Impact = {
-    ammo="Staunch Tathlum +1",
+    range={ name="Dunna", augments={'MP+20','Mag. Acc.+10','"Fast Cast"+3',}},
 	head=empty,
     body="Twilight Cloak",
     hands={ name="Agwu's Gages", augments={'Path: A',}},
@@ -248,31 +248,31 @@ function init_gear_sets()
 	sets.midcast.Geomancy = {
     main={ name="Idris", augments={'Path: A',}},
     sub="Ammurapi Shield",
-    ammo="Staunch Tathlum +1",
-    head="Azimuth Hood +3",
-    body="Azimuth Coat +3",
-    hands={ name="Nyame Gauntlets", augments={'Path: B',}},
-    legs="Azimuth Tights +3",
-    feet="Azimuth Gaiters +3",
-    neck="Bagua Charm +2",
-    waist="Hachirin-no-Obi",
-    left_ear="Malignance Earring",
-    right_ear={ name="Azimuth Earring +1", augments={'System: 1 ID: 1676 Val: 0','Mag. Acc.+14','Damage taken-5%',}},
-    left_ring="Defending Ring",
-    right_ring={ name="Gelatinous Ring +1", augments={'Path: A',}},
-    back={ name="Nantosuelta's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Damage taken-5%',}},
-}
-	--Extra Indi duration as long as you can keep your 900 skill cap.
-	sets.midcast.Geomancy.Indi = {
-    main={ name="Idris", augments={'Path: A',}},
-    sub="Ammurapi Shield",
-    ammo="Staunch Tathlum +1",
+    range={ name="Dunna", augments={'MP+20','Mag. Acc.+10','"Fast Cast"+3',}},
     head="Azimuth Hood +3",
     body="Azimuth Coat +3",
     hands={ name="Nyame Gauntlets", augments={'Path: B',}},
     legs={ name="Bagua Pants +3", augments={'Enhances "Mending Halation" effect',}},
     feet="Azimuth Gaiters +3",
-    neck="Incanter's Torque",
+    neck={ name="Bagua Charm +2", augments={'Path: A',}},
+    waist="Hachirin-no-Obi",
+    left_ear="Magnetic Earring",
+    right_ear={ name="Azimuth Earring +1", augments={'System: 1 ID: 1676 Val: 0','Mag. Acc.+14','Damage taken-5%',}},
+    left_ring="Defending Ring",
+    right_ring={ name="Gelatinous Ring +1", augments={'Path: A',}},
+    back={ name="Lifestream Cape", augments={'Geomancy Skill +10','Indi. eff. dur. +20','Pet: Damage taken -2%',}},
+}
+	--Extra Indi duration as long as you can keep your 900 skill cap.
+	sets.midcast.Geomancy.Indi = {
+    main={ name="Idris", augments={'Path: A',}},
+    sub="Ammurapi Shield",
+    range={ name="Dunna", augments={'MP+20','Mag. Acc.+10','"Fast Cast"+3',}},
+    head="Azimuth Hood +3",
+    body="Azimuth Coat +3",
+    hands={ name="Nyame Gauntlets", augments={'Path: B',}},
+    legs={ name="Bagua Pants +3", augments={'Enhances "Mending Halation" effect',}},
+    feet="Azimuth Gaiters +3",
+    neck={ name="Bagua Charm +2", augments={'Path: A',}},
     waist="Hachirin-no-Obi",
     left_ear="Magnetic Earring",
     right_ear={ name="Azimuth Earring +1", augments={'System: 1 ID: 1676 Val: 0','Mag. Acc.+14','Damage taken-5%',}},

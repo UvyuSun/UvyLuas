@@ -329,7 +329,7 @@ function init_gear_sets()
     neck={ name="Bard's Charm +2", augments={'Path: A',}},
     waist={ name="Sailfi Belt +1", augments={'Path: A',}},
     left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
-    right_ear="Ishvara Earring",
+    right_ear="Hoxne Earring",
     left_ring="Epaminondas's Ring",
     right_ring="Sroda Ring",
     back={ name="Intarabus's Cape", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Damage taken-5%',}},
@@ -374,7 +374,7 @@ function init_gear_sets()
     neck={ name="Bard's Charm +2", augments={'Path: A',}},
     waist="Null Belt",
     left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
-    right_ear={ name="Fili Earring +1", augments={'System: 1 ID: 1676 Val: 0','Accuracy+13','Mag. Acc.+13','Damage taken-4%',}},
+    right_ear={ name="Fili Earring +1", augments={'System: 1 ID: 1676 Val: 0','Accuracy+15','Mag. Acc.+15','Damage taken-5%',}},
     left_ring="Epaminondas's Ring",
     right_ring="Ephramad's Ring",
     back="Null Shawl",
@@ -404,7 +404,7 @@ function init_gear_sets()
     neck={ name="Bard's Charm +2", augments={'Path: A',}},
     waist={ name="Sailfi Belt +1", augments={'Path: A',}},
     left_ear="Regal Earring",
-    right_ear="Ishvara Earring",
+    right_ear="Hoxne Earring",
     left_ring={ name="Metamor. Ring +1", augments={'Path: A',}},
     right_ring="Ephramad's Ring",
     back={ name="Intarabus's Cape", augments={'CHR+20','Accuracy+20 Attack+20','CHR+10','Weapon skill damage +10%','Damage taken-5%',}},
@@ -419,7 +419,7 @@ function init_gear_sets()
     neck={ name="Bard's Charm +2", augments={'Path: A',}},
     waist="Null Belt",
     left_ear="Regal Earring",
-    right_ear={ name="Fili Earring +1", augments={'System: 1 ID: 1676 Val: 0','Accuracy+13','Mag. Acc.+13','Damage taken-4%',}},
+    right_ear={ name="Fili Earring +1", augments={'System: 1 ID: 1676 Val: 0','Accuracy+15','Mag. Acc.+15','Damage taken-5%',}},
     left_ring={ name="Metamor. Ring +1", augments={'Path: A',}},
     right_ring="Ephramad's Ring",
     back="Null Shawl",
@@ -434,7 +434,7 @@ function init_gear_sets()
     neck={ name="Bard's Charm +2", augments={'Path: A',}},
     waist={ name="Kentarch Belt +1", augments={'Path: A',}},
     left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
-    right_ear="Ishvara Earring",
+    right_ear="Hoxne Earring",
     left_ring="Ephramad's Ring",
     right_ring="Epaminondas's Ring",
     back={ name="Intarabus's Cape", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Damage taken-5%',}},
@@ -470,8 +470,8 @@ function init_gear_sets()
     back={ name="Intarabus's Cape", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Damage taken-5%',}},
 }                                                                                                                                               --PDT46%     
 	-- Swap to these on Moonshade using WS if at 3000 TP
-	sets.MaxTP = {ear1="Ishvara Earring",ear2="Telos Earring",}
-	sets.AccMaxTP = {ear1="Ishvara Earring",ear2="Telos Earring",}
+	sets.MaxTP = {ear1="Hoxne Earring",ear2="Telos Earring",}
+	sets.AccMaxTP = {ear1="Hoxne Earring",ear2="Telos Earring",}
 
 	-- Specific weaponskill sets.  Uses the base set if an appropriate WSMod version isn't found.
 
@@ -519,7 +519,7 @@ function init_gear_sets()
     neck="Mnbw. Whistle +1",
     waist="Null Belt",
     left_ear="Regal Earring",
-    right_ear={ name="Fili Earring +1", augments={'System: 1 ID: 1676 Val: 0','Accuracy+13','Mag. Acc.+13','Damage taken-4%',}},
+    right_ear={ name="Fili Earring +1", augments={'System: 1 ID: 1676 Val: 0','Accuracy+15','Mag. Acc.+15','Damage taken-5%',}},
     left_ring="Defending Ring",
     right_ring={ name="Gelatinous Ring +1", augments={'Path: A',}},
     back={ name="Intarabus's Cape", augments={'CHR+20','Mag. Acc+20 /Mag. Dmg.+20','Mag. Acc.+10','"Fast Cast"+10','Damage taken-5%',}},
@@ -534,7 +534,7 @@ function init_gear_sets()
     neck="Mnbw. Whistle +1",
     waist="Null Belt",
     left_ear="Regal Earring",
-    right_ear={ name="Fili Earring +1", augments={'System: 1 ID: 1676 Val: 0','Accuracy+13','Mag. Acc.+13','Damage taken-4%',}},
+    right_ear={ name="Fili Earring +1", augments={'System: 1 ID: 1676 Val: 0','Accuracy+15','Mag. Acc.+15','Damage taken-5%',}},
     left_ring="Defending Ring",
     right_ring={ name="Gelatinous Ring +1", augments={'Path: A',}},
     back={ name="Intarabus's Cape", augments={'CHR+20','Mag. Acc+20 /Mag. Dmg.+20','Mag. Acc.+10','"Fast Cast"+10','Damage taken-5%',}},
@@ -549,7 +549,7 @@ function init_gear_sets()
     neck="Mnbw. Whistle +1",
      waist="Null Belt",
     left_ear="Regal Earring",
-    right_ear={ name="Fili Earring +1", augments={'System: 1 ID: 1676 Val: 0','Accuracy+13','Mag. Acc.+13','Damage taken-4%',}},
+    right_ear={ name="Fili Earring +1", augments={'System: 1 ID: 1676 Val: 0','Accuracy+15','Mag. Acc.+15','Damage taken-5%',}},
     left_ring="Defending Ring",
     right_ring={ name="Gelatinous Ring +1", augments={'Path: A',}},
     back={ name="Intarabus's Cape", augments={'CHR+20','Mag. Acc+20 /Mag. Dmg.+20','Mag. Acc.+10','"Fast Cast"+10','Damage taken-5%',}},
@@ -594,7 +594,7 @@ function init_gear_sets()
     neck="Mnbw. Whistle +1",
     waist="Null Belt",
     left_ear="Regal Earring",
-    right_ear={ name="Fili Earring +1", augments={'System: 1 ID: 1676 Val: 0','Accuracy+13','Mag. Acc.+13','Damage taken-4%',}},
+    right_ear={ name="Fili Earring +1", augments={'System: 1 ID: 1676 Val: 0','Accuracy+15','Mag. Acc.+15','Damage taken-5%',}},
     left_ring="Defending Ring",
     right_ring={ name="Gelatinous Ring +1", augments={'Path: A',}},
     back={ name="Intarabus's Cape", augments={'CHR+20','Mag. Acc+20 /Mag. Dmg.+20','Mag. Acc.+10','"Fast Cast"+10','Damage taken-5%',}},
@@ -644,6 +644,22 @@ function init_gear_sets()
 	sets.midcast.Minne = {legs="Mousai Seraweels +1"}
 	sets.midcast.Minuet = {body="Fili Hongreline +3"}
 	sets.midcast.Paeon = {head="Brioso Roundlet +3",}
+	sets.midcast.Threnody = {
+    range="Gjallarhorn",
+    head="Brioso Roundlet +4",
+    body="Mou. Manteel +1",
+    hands="Fili Manchettes +3",
+    legs="Inyanga Shalwar +2",
+    feet="Brioso Slippers +3",
+    neck="Mnbw. Whistle +1",
+    waist="Null Belt",
+    left_ear="Regal Earring",
+    right_ear={ name="Fili Earring +1", augments={'System: 1 ID: 1676 Val: 0','Accuracy+15','Mag. Acc.+15','Damage taken-5%',}},
+    left_ring="Stikini Ring +1",
+    right_ring="Stikini Ring +1",
+    back={ name="Intarabus's Cape", augments={'CHR+20','Mag. Acc+20 /Mag. Dmg.+20','Mag. Acc.+10','"Fast Cast"+10','Damage taken-5%',}},
+}
+
 	sets.midcast['Carnage Elegy'] = {
     range="Gjallarhorn",
     head="Brioso Roundlet +4",
@@ -654,7 +670,7 @@ function init_gear_sets()
     neck="Mnbw. Whistle +1",
     waist="Null Belt",
     left_ear="Regal Earring",
-    right_ear={ name="Fili Earring +1", augments={'System: 1 ID: 1676 Val: 0','Accuracy+13','Mag. Acc.+13','Damage taken-4%',}},
+    right_ear={ name="Fili Earring +1", augments={'System: 1 ID: 1676 Val: 0','Accuracy+15','Mag. Acc.+15','Damage taken-5%',}},
     left_ring="Stikini Ring +1",
     right_ring="Stikini Ring +1",
     back={ name="Intarabus's Cape", augments={'CHR+20','Mag. Acc+20 /Mag. Dmg.+20','Mag. Acc.+10','"Fast Cast"+10','Damage taken-5%',}},
@@ -669,7 +685,7 @@ function init_gear_sets()
     neck="Mnbw. Whistle +1",
     waist="Null Belt",
     left_ear="Regal Earring",
-    right_ear={ name="Fili Earring +1", augments={'System: 1 ID: 1676 Val: 0','Accuracy+13','Mag. Acc.+13','Damage taken-4%',}},
+    right_ear={ name="Fili Earring +1", augments={'System: 1 ID: 1676 Val: 0','Accuracy+15','Mag. Acc.+15','Damage taken-5%',}},
     left_ring="Stikini Ring +1",
     right_ring="Stikini Ring +1",
     back={ name="Intarabus's Cape", augments={'CHR+20','Mag. Acc+20 /Mag. Dmg.+20','Mag. Acc.+10','"Fast Cast"+10','Damage taken-5%',}},
@@ -720,10 +736,10 @@ function init_gear_sets()
     hands="Fili Manchettes +3",
     legs="Fili Rhingrave +3",
     feet="Fili Cothurnes +3",
-    neck="Mnbw Whistle +1",
+    neck="Moonbow Whistle +1",
     waist="Null Belt",
     left_ear="Regal Earring",
-    right_ear={ name="Fili Earring +1", augments={'System: 1 ID: 1676 Val: 0','Accuracy+13','Mag. Acc.+13','Damage taken-4%',}},
+    right_ear={ name="Fili Earring +1", augments={'System: 1 ID: 1676 Val: 0','Accuracy+15','Mag. Acc.+15','Damage taken-5%',}},
     left_ring="Stikini Ring +1",
     right_ring="Stikini Ring +1",
     back="Null Shawl",
@@ -742,7 +758,7 @@ function init_gear_sets()
     neck="Mnbw. Whistle +1",
     waist="Null Belt",
     left_ear="Regal Earring",
-    right_ear={ name="Fili Earring +1", augments={'System: 1 ID: 1676 Val: 0','Accuracy+13','Mag. Acc.+13','Damage taken-4%',}},
+    right_ear={ name="Fili Earring +1", augments={'System: 1 ID: 1676 Val: 0','Accuracy+15','Mag. Acc.+15','Damage taken-5%',}},
     left_ring="Stikini Ring +1",
     right_ring="Stikini Ring +1",
     back="Null Shawl",
@@ -1022,7 +1038,7 @@ function init_gear_sets()
     neck="Null Loop",
     waist="Null Belt",
     left_ear="Regal Earring",
-    right_ear={ name="Fili Earring +1", augments={'System: 1 ID: 1676 Val: 0','Accuracy+13','Mag. Acc.+13','Damage taken-4%',}},
+    right_ear={ name="Fili Earring +1", augments={'System: 1 ID: 1676 Val: 0','Accuracy+15','Mag. Acc.+15','Damage taken-5%',}},
     left_ring="Stikini Ring +1",
     right_ring="Stikini Ring +1",
     back="Null Shawl",
@@ -1151,25 +1167,6 @@ function init_gear_sets()
     right_ring="Stikini Ring +1",
     back={ name="Intarabus's Cape", augments={'CHR+20','Mag. Acc+20 /Mag. Dmg.+20','Mag. Acc.+10','"Fast Cast"+10','Damage taken-5%',}},
 }
-	
-	-- Defense sets
-
---	sets.defense.PDT = {
---    range={ name="Linos", augments={'Accuracy+20','"Store TP"+4','Quadruple Attack +3',}},
---    head={ name="Bunzi's Hat", augments={'Path: A',}},
---    body="Ashera Harness",
---    hands={ name="Gazu Bracelets +1", augments={'Path: A',}},
---    legs="Fili Rhingrave +3",
---    feet={ name="Nyame Sollerets", augments={'Path: B',}},
---    neck={ name="Bard's Charm +2", augments={'Path: A',}},
---    waist={ name="Kentarch Belt +1", augments={'Path: A',}},
---    left_ear="Telos Earring",
---    right_ear={ name="Fili Earring +1", augments={'System: 1 ID: 1676 Val: 0','Accuracy+13','Mag. Acc.+13','Damage taken-4%',}},
---    left_ring="Chirich Ring +1",
---    right_ring="Ephramad's Ring",
---    back={ name="Intarabus's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}},
---}
-
 	sets.defense.MDT = {}
 
 	sets.Kiting = {feet="Fili Cothurnes +3"}
@@ -1188,7 +1185,7 @@ function init_gear_sets()
 	sets.engaged = {	          --Non DW sub Naegling.
     main="Naegling",
     sub="Ammurapi Shield",
-    range={ name="Linos", augments={'Accuracy+15 Attack+15','"Dbl.Atk."+3','Quadruple Attack +3',}},
+    range={ name="Linos", augments={'Accuracy+20','"Store TP"+4','Quadruple Attack +3',}},
     head={ name="Bunzi's Hat", augments={'Path: A',}},
     body="Ashera Harness",
     hands={ name="Bunzi's Gloves", augments={'Path: A',}},
@@ -1205,7 +1202,7 @@ function init_gear_sets()
 	sets.engaged.Twash = {         --Non DW Sub Twashtar.                                                                                                            --
     main={ name="Twashtar", augments={'Path: A',}},
     sub="Ammurapi Shield",
-    range={ name="Linos", augments={'Accuracy+15 Attack+15','"Dbl.Atk."+3','Quadruple Attack +3',}},
+    range={ name="Linos", augments={'Accuracy+20','"Store TP"+4','Quadruple Attack +3',}},
     head={ name="Bunzi's Hat", augments={'Path: A',}},
     body="Ashera Harness",
     hands={ name="Bunzi's Gloves", augments={'Path: A',}},

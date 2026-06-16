@@ -115,7 +115,7 @@ function init_gear_sets()
     neck="Rep. Plat. Medal",
     waist="Prosilio Belt +1",
     left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
-    right_ear="Ishvara Earring",
+    right_ear="Hoxne Earring",
     left_ring="Epaminondas's Ring",
     right_ring="Ephramad's Ring",
     back={ name="Nantosuelta's Cape", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Damage taken-5%',}},

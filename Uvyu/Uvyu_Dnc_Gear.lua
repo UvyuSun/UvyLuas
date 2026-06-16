@@ -2,27 +2,16 @@
 function user_setup()
     state.OffenseMode:options('Normal','Acc')
     state.HybridMode:options()
-    state.WeaponskillMode:options('Normal')
+    state.WeaponskillMode:options('Normal','PDL')
 	state.IdleMode:options('Normal','Aminon','Sphere')
     state.PhysicalDefenseMode:options('PDT')
 	state.MagicalDefenseMode:options('MDT')
 	state.ResistDefenseMode:options('MEVA')
-	state.Weapons:options('None','Terps','Twash','H2H')
+	state.Weapons:options('None','Twash','Mpu')
     state.ExtraMeleeMode = M{['description']='Extra Melee Mode','None','Suppa','DWEarrings','DWMax'}
 
     -- Additional local binds
-    send_command('bind @` gs c step')
-	send_command('bind ^!@` gs c toggle usealtstep')
-	send_command('bind ^@` gs c cycle mainstep')
-	send_command('bind !@` gs c cycle altstep')
-    send_command('bind ^` input /ja "Saber Dance" <me>')
-    send_command('bind !` input /ja "Fan Dance" <me>')
-	send_command('bind ^\\\\ input /ja "Chocobo Jig II" <me>')
-	send_command('bind !\\\\ input /ja "Spectral Jig" <me>')
-	send_command('bind !backspace input /ja "Reverse Flourish" <me>')
-	send_command('bind ^backspace input /ja "No Foot Rise" <me>')
-	send_command('bind %~` gs c cycle SkillchainMode')
-
+	send_command('bind !` input /ma "Chocobo Jig II" <me>')
 	send_command('wait 3; input /lockstyleset 15')
     select_default_macro_book()
 end
@@ -40,20 +29,33 @@ function init_gear_sets()
 }
 
 	-- Weapons sets
-	sets.weapons.Terps = {main={ name="Twashtar", augments={'Path: A',}},sub={ name="Gleti's Knife", augments={'Path: A',}},}
+	sets.weapons.Mpu = {main="Mpu Gandring",sub={ name="Fusetto +3", augments={'TP Bonus +1000',}},}
 	sets.weapons.Twash = {main="Twashtar",sub="Fusetto +3"}
-	sets.weapons.H2H = {main="Karambit"}
 
     -- Precast Sets
     
     -- Precast sets to enhance JAs
 
     sets.precast.JA['No Foot Rise'] = {body="Horos Casaque +3"}
-
     sets.precast.JA['Trance'] = {head="Horos Tiara +3"}
-    
-
-    -- Waltz set (chr and vit)
+    sets.precast.JA['Saber Dance'] = {legs="Horos Tights +3"}
+    sets.precast.Jig = {legs="Horos Tights +3",feet="Maxixi Toe Shoes +3"}
+    sets.precast.Samba = {head="Maxixi Tiara +4",back={ name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Dbl.Atk."+10','Damage taken-5%',}}}
+    sets.precast.Step = {
+    ammo="Voluspa Tathlum",
+    head="Maxixi Tiara +4",
+    body="Malignance Tabard",
+    hands="Maxixi Bangles +4",
+    legs="Malignance Tights",
+    feet={ name="Horos Toe Sh. +4", augments={'Enhances "Closed Position" effect',}},
+    neck="Null Loop",
+    waist="Null Belt",
+    left_ear={ name="Alabaster Earring", augments={'Path: A',}},
+    right_ear={ name="Macu. Earring +2", augments={'System: 1 ID: 1676 Val: 0','Accuracy+16','Mag. Acc.+16','"Store TP"+6','DEX+7 AGI+7',}},
+    left_ring="Ephramad's Ring",
+    right_ring="Regal Ring",
+    back="Null Shawl",
+}
     sets.precast.Waltz = {
     head={ name="Horos Tiara +3", augments={'Enhances "Trance" effect',}},
     body="Maxixi Casaque +3",
@@ -68,99 +70,90 @@ function init_gear_sets()
     right_ring="Defending Ring",
     back={ name="Toetapper Mantle", augments={'"Store TP"+2','"Dual Wield"+2','"Rev. Flourish"+30','Weapon skill damage +1%',}},
 }
-		
-	sets.Self_Waltz = {}
-        
-    -- Don't need any special gear for Healing Waltz.
-    sets.precast.Waltz['Healing Waltz'] = {}
-	
-    sets.precast.Samba = {head="Maxixi Tiara +3"}   --head="Maxixi Tiara"
-	
-    sets.precast.Jig = {legs="Horos Tights +3",feet="Maxixi Toe Shoes +3"}   --legs="Horos Tights", feet="Maxixi Toe Shoes"
-	
-    sets.precast.Step = {
-    ammo="Yamarang",
-    head="Maculele Tiara +3",
-    body={ name="Nyame Mail", augments={'Path: B',}},
-    hands={ name="Nyame Gauntlets", augments={'Path: B',}},
-    legs={ name="Nyame Flanchard", augments={'Path: B',}},
-    feet="Macu. Toe Sh. +3",
-    neck={ name="Etoile Gorget +2", augments={'Path: A',}},
-    waist="Reiki Yotai",
-    left_ear="Telos Earring",
-    right_ear="Digni. Earring",
-    left_ring="Chirich Ring +1",
-    right_ring="Chirich Ring +1",
-    back={ name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','Weapon skill damage +10%',}},
-}
-		
-    sets.Enmity = {
-    ammo="Sapience Orb",
-    hands={ name="Horos Bangles +3", augments={'Enhances "Fan Dance" effect',}},
-}
-		
-    sets.precast.JA.Provoke = sets.Enmity
-
-    sets.precast.Flourish1 = {}
-    sets.precast.Flourish1['Violent Flourish'] = {
-    ammo="Yamarang",
-    head={ name="Nyame Helm", augments={'Path: B',}},
-    body={ name="Horos Casaque +3", augments={'Enhances "No Foot Rise" effect',}},
-    hands={ name="Nyame Gauntlets", augments={'Path: B',}},
-    legs={ name="Nyame Flanchard", augments={'Path: B',}},
-    feet={ name="Horos T. Shoes +3", augments={'Enhances "Closed Position" effect',}},
-    neck={ name="Etoile Gorget +2", augments={'Path: A',}},
-    waist="Reiki Yotai",
-    left_ear="Telos Earring",
-    right_ear="Digni. Earring",
-    left_ring="Chirich Ring +1",
-    right_ring="Defending Ring",
-    back={ name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Store TP"+10','Damage taken-5%',}},
-}
-		
-    sets.precast.Flourish1['Animated Flourish'] = sets.Enmity
-		
-    sets.precast.Flourish1['Desperate Flourish'] = {
-    ammo="Yamarang",
-    head={ name="Nyame Helm", augments={'Path: B',}},
-    body={ name="Nyame Mail", augments={'Path: B',}},
+	sets.Self_Waltz = {
+    head={ name="Horos Tiara +3", augments={'Enhances "Trance" effect',}},
+    body="Maxixi Casaque +3",
     hands={ name="Nyame Gauntlets", augments={'Path: B',}},
     legs={ name="Nyame Flanchard", augments={'Path: B',}},
     feet={ name="Nyame Sollerets", augments={'Path: B',}},
     neck={ name="Etoile Gorget +2", augments={'Path: A',}},
-    waist="Skrymir Cord",
+    waist="Chaac Belt",
     left_ear="Enchntr. Earring +1",
-    right_ear="Digni. Earring",
-    left_ring="Rahab Ring",
-    right_ring={ name="Metamor. Ring +1", augments={'Path: A',}},
-    back={ name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Store TP"+10','Damage taken-5%',}},
+    right_ear="Cessance Earring",
+    left_ring={ name="Metamor. Ring +1", augments={'Path: A',}},
+    right_ring="Defending Ring",
+    back={ name="Toetapper Mantle", augments={'"Store TP"+2','"Dual Wield"+2','"Rev. Flourish"+30','Weapon skill damage +1%',}},
 }
-
+   sets.precast.Waltz['Healing Waltz'] = {}
+    sets.Enmity = {
+    ammo="Sapience Orb",
+    head="Halitus Helm",
+    body="Emet Harness +1",
+    hands="Kurys Gloves",
+    legs={ name="Nyame Flanchard", augments={'Path: B',}},
+    feet={ name="Nyame Sollerets", augments={'Path: B',}},
+    neck={ name="Unmoving Collar +1", augments={'Path: A',}},
+    waist="Goading Belt",
+    left_ear="Cryptic Earring",
+    right_ear="Trux Earring",
+    left_ring="Eihwaz Ring",
+    right_ring="Supershear Ring",
+    back={ name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Dbl.Atk."+10','Damage taken-5%',}},
+}		
+    sets.precast.JA.Provoke = sets.Enmity
+    sets.precast.Flourish1 = {}
+    sets.precast.Flourish1['Violent Flourish'] = {
+    ammo="Voluspa Tathlum",
+    head="Maculele Tiara +3",
+    body={ name="Horos Casaque +3", augments={'Enhances "No Foot Rise" effect',}},
+    hands="Maxixi Bangles +4",
+    legs="Malignance Tights",
+    feet="Macu. Toe Sh. +3",
+    neck="Null Loop",
+    waist="Null Belt",
+    left_ear={ name="Alabaster Earring", augments={'Path: A',}},
+    right_ear={ name="Macu. Earring +2", augments={'System: 1 ID: 1676 Val: 0','Accuracy+16','Mag. Acc.+16','"Store TP"+6','DEX+7 AGI+7',}},
+    left_ring="Ephramad's Ring",
+    right_ring="Regal Ring",
+    back="Null Shawl",
+}
+    sets.precast.Flourish1['Animated Flourish'] = sets.Enmity
+    sets.precast.Flourish1['Desperate Flourish'] = {
+    ammo="Voluspa Tathlum",
+    head="Maculele Tiara +3",
+    body={ name="Gleti's Cuirass", augments={'Path: A',}},
+    hands="Maxixi Bangles +4",
+    legs="Malignance Tights",
+    feet="Macu. Toe Sh. +3",
+    neck="Null Loop",
+    waist="Null Belt",
+    left_ear={ name="Alabaster Earring", augments={'Path: A',}},
+    right_ear={ name="Macu. Earring +2", augments={'System: 1 ID: 1676 Val: 0','Accuracy+16','Mag. Acc.+16','"Store TP"+6','DEX+7 AGI+7',}},
+    left_ring="Ephramad's Ring",
+    right_ring="Regal Ring",
+    back="Null Shawl",
+}
     sets.precast.Flourish2 = {}
-	
     sets.precast.Flourish2['Reverse Flourish'] = {
     hands="Macu. Bangles +3",
     back={ name="Toetapper Mantle", augments={'"Store TP"+2','"Dual Wield"+2','"Rev. Flourish"+30','Weapon skill damage +1%',}},
 }
     sets.precast.Flourish2['Building Flourish'] = {}
-
     sets.precast.Flourish3 = {}
-	
     sets.precast.Flourish3['Striking Flourish'] = {body="Maculele Casaque +2"}
-	
     sets.precast.Flourish3['Climactic Flourish'] = {} 
 
     -- Fast cast sets for spells
     
     sets.precast.FC = {
     ammo="Sapience Orb",
+    head={ name="Herculean Helm", augments={'Pet: Accuracy+11 Pet: Rng. Acc.+11','Sklchn.dmg.+3%','Phalanx +5','Accuracy+10 Attack+10','Mag. Acc.+15 "Mag.Atk.Bns."+15',}},
     hands={ name="Leyline Gloves", augments={'Accuracy+15','Mag. Acc.+15','"Mag.Atk.Bns."+15','"Fast Cast"+3',}},
     neck="Orunmila's Torque",
-    left_ear="Enchntr. Earring +1",
     right_ear="Loquac. Earring",
     left_ring="Rahab Ring",
+    right_ring="Lebeche Ring",
 }
-
     sets.precast.FC.Utsusemi = set_combine(sets.precast.FC, {neck="Magoraga Beads"})
 
        
@@ -172,81 +165,15 @@ function init_gear_sets()
     body={ name="Nyame Mail", augments={'Path: B',}},
     hands={ name="Nyame Gauntlets", augments={'Path: B',}},
     legs={ name="Nyame Flanchard", augments={'Path: B',}},
-    feet="Maculele Toe Shoes +3",
-    neck={ name="Etoile Gorget +2", augments={'Path: A',}},
-    waist={ name="Sailfi Belt +1", augments={'Path: A',}},
-    left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
-    right_ear="Ishvara Earring",
-    left_ring="Epaminondas's Ring",
-    right_ring="Karieyh Ring +1",
-    back={ name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Weapon skill damage +10%',}},
-}
-
-    -- Specific weaponskill sets.  Uses the base set if an appropriate WSMod version isn't found.
-    sets.precast.WS["Rudra's Storm"] = {
-    ammo={ name="Coiste Bodhar", augments={'Path: A',}},
-    head="Maculele Tiara +3",
-    body={ name="Nyame Mail", augments={'Path: B',}},
-    hands={ name="Nyame Gauntlets", augments={'Path: B',}},
-    legs={ name="Nyame Flanchard", augments={'Path: B',}},
-    feet={ name="Nyame Sollerets", augments={'Path: B',}},
-    neck={ name="Etoile Gorget +2", augments={'Path: A',}},
-    waist={ name="Kentarch Belt +1", augments={'Path: A',}},
-    left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
-    right_ear={ name="Macu. Earring +2", augments={'System: 1 ID: 1676 Val: 0','Accuracy+16','Mag. Acc.+16','"Store TP"+6','DEX+7 AGI+7',}},
-    left_ring="Epaminondas's Ring",
-    right_ring="Regal Ring",
-    back={ name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','Weapon skill damage +10%',}},
-}
-	
-    sets.precast.WS["Shark Bite"] = {
-    ammo={ name="Coiste Bodhar", augments={'Path: A',}},
-    head="Maculele Tiara +3",
-    body={ name="Nyame Mail", augments={'Path: B',}},
-    hands={ name="Nyame Gauntlets", augments={'Path: B',}},
-    legs={ name="Nyame Flanchard", augments={'Path: B',}},
     feet={ name="Nyame Sollerets", augments={'Path: B',}},
     neck={ name="Etoile Gorget +2", augments={'Path: A',}},
     waist={ name="Sailfi Belt +1", augments={'Path: A',}},
     left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
-    right_ear="Sherida Earring",
-    left_ring="Regal Ring",
-    right_ring="Ilabrat Ring",
-    back={ name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','Weapon skill damage +10%',}},
-}
-	
-    sets.precast.WS['Evisceration'] = {
-    ammo={ name="Coiste Bodhar", augments={'Path: A',}},
-    head={ name="Nyame Helm", augments={'Path: B',}},
-    body={ name="Nyame Mail", augments={'Path: B',}},
-    hands={ name="Nyame Gauntlets", augments={'Path: B',}},
-    legs={ name="Nyame Flanchard", augments={'Path: B',}},
-    feet={ name="Nyame Sollerets", augments={'Path: B',}},
-    neck={ name="Etoile Gorget +2", augments={'Path: A',}},
-    waist={ name="Sailfi Belt +1", augments={'Path: A',}},
-    left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
-    right_ear="Sherida Earring",
-    left_ring="Epaminondas's Ring",
-    right_ring="Karieyh Ring +1",
+    right_ear="Hoxne Earring",
+    left_ring="Ephramad's Ring",
+    right_ring="Epaminondas's Ring",
     back={ name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Weapon skill damage +10%',}},
 }
-		
-    sets.precast.WS['Pyrrhic Kleos'] = {
-    ammo={ name="Coiste Bodhar", augments={'Path: A',}},
-    head={ name="Nyame Helm", augments={'Path: B',}},
-    body="Gleti's Cuirass",
-    hands={ name="Nyame Gauntlets", augments={'Path: B',}},
-    legs={ name="Horos Tights +3", augments={'Enhances "Saber Dance" effect',}},
-    feet={ name="Nyame Sollerets", augments={'Path: B',}},
-    neck="Fotia Gorget",
-    waist="Fotia Belt",
-    left_ear="Brutal Earring",
-    right_ear="Sherida Earring",
-    left_ring="Epaminondas's Ring",
-    right_ring="Karieyh Ring +1",
-    back={ name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Weapon skill damage +10%',}},
-}
-
     sets.precast.WS['Aeolian Edge'] = {
     ammo="Pemphredo Tathlum",
     head={ name="Nyame Helm", augments={'Path: B',}},
@@ -254,20 +181,124 @@ function init_gear_sets()
     hands={ name="Nyame Gauntlets", augments={'Path: B',}},
     legs={ name="Nyame Flanchard", augments={'Path: B',}},
     feet={ name="Nyame Sollerets", augments={'Path: B',}},
-    neck="Baetyl Pendant",
-    waist="Skrymir Cord",
+    neck="Sibyl Scarf",
+    waist="Orpheus's Sash",
     left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
     right_ear="Friomisi Earring",
     left_ring="Epaminondas's Ring",
-    right_ring="Karieyh Ring +1",
-    back={ name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Weapon skill damage +10%',}},
+    right_ring="Acumen Ring",
+    back={ name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','Weapon skill damage +10%','Damage taken-5%',}},
 }
-
+    sets.precast.WS['Evisceration'] = {
+    ammo={ name="Coiste Bodhar", augments={'Path: A',}},
+    head={ name="Blistering Sallet +1", augments={'Path: A',}},
+    body={ name="Gleti's Cuirass", augments={'Path: A',}},
+    hands={ name="Gleti's Gauntlets", augments={'Path: A',}},
+    legs={ name="Gleti's Breeches", augments={'Path: A',}},
+    feet={ name="Gleti's Boots", augments={'Path: A',}},
+    neck={ name="Etoile Gorget +2", augments={'Path: A',}},
+    waist="Fotia Belt",
+    left_ear="Odr Earring",
+    right_ear={ name="Macu. Earring +2", augments={'System: 1 ID: 1676 Val: 0','Accuracy+16','Mag. Acc.+16','"Store TP"+6','DEX+7 AGI+7',}},
+    left_ring="Gere Ring",
+    right_ring="Regal Ring",
+    back={ name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','Weapon skill damage +10%','Damage taken-5%',}},
+}
+    sets.precast.WS['Pyrrhic Kleos'] = {
+    ammo={ name="Coiste Bodhar", augments={'Path: A',}},
+    head={ name="Gleti's Mask", augments={'Path: A',}},
+    body={ name="Gleti's Cuirass", augments={'Path: A',}},
+    hands={ name="Gleti's Gauntlets", augments={'Path: A',}},
+    legs={ name="Gleti's Breeches", augments={'Path: A',}},
+    feet={ name="Gleti's Boots", augments={'Path: A',}},
+    neck="Fotia Gorget",
+    waist="Fotia Belt",
+    left_ear={ name="Alabaster Earring", augments={'Path: A',}},
+    right_ear="Hoxne Earring",
+    left_ring="Gere Ring",
+    right_ring="Regal Ring",
+    back={ name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','Weapon skill damage +10%','Damage taken-5%',}},
+}
+    sets.precast.WS["Rudra's Storm"] = {
+    ammo={ name="Coiste Bodhar", augments={'Path: A',}},
+    head="Maculele Tiara +3",
+    body={ name="Nyame Mail", augments={'Path: B',}},
+    hands="Maxixi Bangles +4",
+    legs={ name="Nyame Flanchard", augments={'Path: B',}},
+    feet={ name="Nyame Sollerets", augments={'Path: B',}},
+    neck={ name="Etoile Gorget +2", augments={'Path: A',}},
+    waist={ name="Kentarch Belt +1", augments={'Path: A',}},
+    left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
+    right_ear="Hoxne Earring",
+    left_ring="Epaminondas's Ring",
+    right_ring="Regal Ring",
+    back={ name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','Weapon skill damage +10%','Damage taken-5%',}},
+}
+    sets.precast.WS["Rudra's Storm"].PDL = {
+    ammo={ name="Coiste Bodhar", augments={'Path: A',}},
+    head="Maculele Tiara +3",
+    body={ name="Nyame Mail", augments={'Path: B',}},
+    hands="Maxixi Bangles +4",
+    legs={ name="Nyame Flanchard", augments={'Path: B',}},
+    feet={ name="Nyame Sollerets", augments={'Path: B',}},
+    neck={ name="Etoile Gorget +2", augments={'Path: A',}},
+    waist={ name="Kentarch Belt +1", augments={'Path: A',}},
+    left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
+    right_ear={ name="Macu. Earring +2", augments={'System: 1 ID: 1676 Val: 0','Accuracy+16','Mag. Acc.+16','"Store TP"+6','DEX+7 AGI+7',}},
+    left_ring="Ephramad's Ring",
+    right_ring="Regal Ring",
+    back={ name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','Weapon skill damage +10%','Damage taken-5%',}},
+}
+    sets.precast.WS["Ruthless Stroke"] = {
+    ammo={ name="Coiste Bodhar", augments={'Path: A',}},
+    head="Maculele Tiara +3",
+    body={ name="Nyame Mail", augments={'Path: B',}},
+    hands="Maxixi Bangles +4",
+    legs={ name="Nyame Flanchard", augments={'Path: B',}},
+    feet={ name="Nyame Sollerets", augments={'Path: B',}},
+    neck={ name="Etoile Gorget +2", augments={'Path: A',}},
+    waist={ name="Sailfi Belt +1", augments={'Path: A',}},
+    left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
+    right_ear="Hoxne Earring",
+    left_ring="Epaminondas's Ring",
+    right_ring="Regal Ring",
+    back={ name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','Weapon skill damage +10%','Damage taken-5%',}},
+}
+    sets.precast.WS["Ruthless Stroke"].PDL = {
+    ammo={ name="Coiste Bodhar", augments={'Path: A',}},
+    head="Maculele Tiara +3",
+    body={ name="Nyame Mail", augments={'Path: B',}},
+    hands="Maxixi Bangles +4",
+    legs={ name="Nyame Flanchard", augments={'Path: B',}},
+    feet={ name="Nyame Sollerets", augments={'Path: B',}},
+    neck={ name="Etoile Gorget +2", augments={'Path: A',}},
+    waist={ name="Kentarch Belt +1", augments={'Path: A',}},
+    left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
+    right_ear={ name="Macu. Earring +2", augments={'System: 1 ID: 1676 Val: 0','Accuracy+16','Mag. Acc.+16','"Store TP"+6','DEX+7 AGI+7',}},
+    left_ring="Ephramad's Ring",
+    right_ring="Regal Ring",
+    back={ name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','Weapon skill damage +10%','Damage taken-5%',}},
+}
+    sets.precast.WS["Shark Bite"] = {
+    ammo={ name="Coiste Bodhar", augments={'Path: A',}},
+    head="Maculele Tiara +3",
+    body={ name="Nyame Mail", augments={'Path: B',}},
+    hands="Maxixi Bangles +4",
+    legs={ name="Nyame Flanchard", augments={'Path: B',}},
+    feet={ name="Nyame Sollerets", augments={'Path: B',}},
+    neck={ name="Etoile Gorget +2", augments={'Path: A',}},
+    waist={ name="Kentarch Belt +1", augments={'Path: A',}},
+    left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
+    right_ear="Hoxne Earring",
+    left_ring="Epaminondas's Ring",
+    right_ring="Regal Ring",
+    back={ name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','Weapon skill damage +10%','Damage taken-5%',}},
+}
 	-- Swap to these on Moonshade using WS if at 3000 TP
-	sets.MaxTP = {ear1="Ishvara Earring",ear2="Sherida Earring"}
-	sets.AccMaxTP = {ear1="Telos Earring",ear2="Sherida Earring"}
+	sets.MaxTP = {ear1="Sherida Earring",ear2="Hoxne Earring"}
+	sets.AccMaxTP = {ear1="Sherida Earring",ear2="Hoxne Earring"}
 	
-    sets.Skillchain = {} --hands="Charis Bangles +2"
+    sets.Skillchain = {}
     
     
     -- Midcast Sets
@@ -289,18 +320,18 @@ function init_gear_sets()
 
     sets.idle = {
     ammo="Staunch Tathlum +1",
-    head="Malignance Chapeau",
-    body="Malignance Tabard",
-    hands="Malignance Gloves",
+    head="Null Masque",
+    body="Adamantite Armor",
+    hands="Macu. Bangles +3",
     legs="Malignance Tights",
-    feet="Malignance Boots",
-    neck={ name="Loricate Torque +1", augments={'Path: A',}},
-    waist="Carrier's Sash",
-    left_ear="Arete del Luna +1",
+    feet="Macu. Toe Sh. +3",
+    neck={ name="Warder's Charm +1", augments={'Path: A',}},
+    waist="Engraved belt",
+    left_ear={ name="Arete del Luna +1", augments={'Path: A',}},
     right_ear="Hearty Earring",
-    left_ring="Defending Ring",
-    right_ring={ name="Gelatinous Ring +1", augments={'Path: A',}},
-    back="Moonlight Cape",
+    left_ring="Archon Ring",
+    right_ring="Shadow Ring",
+    back="Null Shawl",
 }
     sets.idle.Aminon = {
     main={ name="Twashtar", augments={'Path: A',}},
@@ -325,19 +356,19 @@ function init_gear_sets()
     -- Defense sets
 
     sets.defense.DT = {
-    ammo={ name="Coiste Bodhar", augments={'Path: A',}},
-    head={ name="Nyame Helm", augments={'Path: B',}},
-    body={ name="Nyame Mail", augments={'Path: B',}},
-    hands={ name="Nyame Gauntlets", augments={'Path: B',}},
-    legs={ name="Nyame Flanchard", augments={'Path: B',}},
-    feet={ name="Nyame Sollerets", augments={'Path: B',}},
-    neck="Loricate Torque +1",
-    waist={ name="Sailfi Belt +1", augments={'Path: A',}},
-    left_ear="Arete del Luna +1",
+    ammo="Staunch Tathlum +1",
+    head="Null Masque",
+    body="Adamantite Armor",
+    hands="Macu. Bangles +3",
+    legs="Malignance Tights",
+    feet="Macu. Toe Sh. +3",
+    neck={ name="Warder's Charm +1", augments={'Path: A',}},
+    waist="Engraved belt",
+    left_ear={ name="Arete del Luna +1", augments={'Path: A',}},
     right_ear="Hearty Earring",
-    left_ring="Defending Ring",
-    right_ring="Karieyh Ring +1",
-    back="Moonlight Cape",
+    left_ring="Archon Ring",
+    right_ring="Shadow Ring",
+    back="Null Shawl",
 }
 
     sets.Kiting = {feet="Skadi's Jambeaux +1"}
@@ -351,10 +382,8 @@ function init_gear_sets()
     
     -- Normal melee group
     sets.engaged = {
-    main={ name="Twashtar", augments={'Path: A',}},
-    sub={ name="Fusetto +3", augments={'TP Bonus +1000',}},
     ammo={ name="Coiste Bodhar", augments={'Path: A',}},
-    head="Malignance Chapeau",
+    head="Maculele Tiara +3",
     body={ name="Gleti's Cuirass", augments={'Path: A',}},
     hands="Malignance Gloves",
     legs={ name="Gleti's Breeches", augments={'Path: A',}},
@@ -363,24 +392,24 @@ function init_gear_sets()
     waist={ name="Sailfi Belt +1", augments={'Path: A',}},
     left_ear="Sherida Earring",
     right_ear={ name="Macu. Earring +2", augments={'System: 1 ID: 1676 Val: 0','Accuracy+16','Mag. Acc.+16','"Store TP"+6','DEX+7 AGI+7',}},
-    left_ring="Moonlight Ring",
-    right_ring="Gere Ring",
-    back={ name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
+    left_ring="Gere Ring",
+    right_ring="Epona's Ring",
+    back={ name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Dbl.Atk."+10','Damage taken-5%',}},
 }
 	sets.engaged.Acc = {
-    ammo={ name="Coiste Bodhar", augments={'Path: A',}},
-    head={ name="Adhemar Bonnet +1", augments={'STR+12','DEX+12','Attack+20',}},
-    body={ name="Horos Casaque +3", augments={'Enhances "No Foot Rise" effect',}},
-    hands="Gleti's Gauntlets",
-    legs={ name="Samnuha Tights", augments={'STR+10','DEX+10','"Dbl.Atk."+3','"Triple Atk."+3',}},
-    feet={ name="Horos T. Shoes +3", augments={'Enhances "Closed Position" effect',}},
+    ammo="Aurgelmir Orb +1",
+    head="Maculele Tiara +3",
+    body="Malignance Tabard",
+    hands="Malignance Gloves",
+    legs="Malignance Tights",
+    feet="Macu. Toe Sh. +3",
     neck={ name="Etoile Gorget +2", augments={'Path: A',}},
     waist="Windbuffet Belt +1",
-    left_ear="Brutal Earring",
-    right_ear="Cessance Earring",
-    left_ring="Defending Ring",
-    right_ring="Epona's Ring",
-    back={ name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Store TP"+10','Damage taken-5%',}},
+    left_ear="Dedition Earring",
+    right_ear={ name="Macu. Earring +2", augments={'System: 1 ID: 1676 Val: 0','Accuracy+16','Mag. Acc.+16','"Store TP"+6','DEX+7 AGI+7',}},
+    left_ring="Chirich Ring +1",
+    right_ring="Chirich Ring +1",
+    back={ name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Dbl.Atk."+10','Damage taken-5%',}},
 }
 
 

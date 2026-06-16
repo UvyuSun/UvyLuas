@@ -59,7 +59,7 @@ function init_gear_sets()
 	
 	-- Precast sets to enhance JAs
 	sets.precast.JA['Berserk'] = {body="Pumm. Lorica +3",feet={ name="Agoge Calligae +3", augments={'Enhances "Tomahawk" effect',}},back="Cichol's Mantle"}
-	sets.precast.JA['Warcry'] = {head={ name="Agoge Mask +3", augments={'Enhances "Savagery" effect',}},}
+	sets.precast.JA['Warcry'] = {head={ name="Agoge Mask +4", augments={'Enhances "Savagery" effect',}},}
 	sets.precast.JA['Defender'] = {hands={ name="Agoge Mufflers +3", augments={'Enhances "Mighty Strikes" effect',}},}
 	sets.precast.JA['Aggressor'] = {body={ name="Agoge Lorica +3", augments={'Enhances "Aggressive Aim" effect',}},}                --head="Pumm. Mask +3",
 	sets.precast.JA['Mighty Strikes'] = {hands={ name="Agoge Mufflers +3", augments={'Enhances "Mighty Strikes" effect',}},}
@@ -120,7 +120,7 @@ function init_gear_sets()
     -- Specific weaponskill sets.  Uses the base set if an appropriate WSMod version isn't found.	
     sets.precast.WS['Savage Blade'] = {
     ammo="Knobkierrie",
-    head={ name="Agoge Mask +3", augments={'Enhances "Savagery" effect',}},
+    head={ name="Agoge Mask +4", augments={'Enhances "Savagery" effect',}},
     body={ name="Nyame Mail", augments={'Path: B',}},
     hands={ name="Nyame Gauntlets", augments={'Path: B',}},
     legs={ name="Nyame Flanchard", augments={'Path: B',}},
@@ -137,7 +137,7 @@ function init_gear_sets()
 
     sets.precast.WS['Upheaval'] = {
     ammo="Knobkierrie",
-    head={ name="Nyame Helm", augments={'Path: B',}},
+    head={ name="Agoge Mask +4", augments={'Enhances "Savagery" effect',}},
     body={ name="Nyame Mail", augments={'Path: B',}}, 
     hands={ name="Nyame Gauntlets", augments={'Path: B',}},
     legs={ name="Nyame Flanchard", augments={'Path: B',}},
@@ -174,7 +174,7 @@ function init_gear_sets()
 	sets.MaxTP = {ear1="Lugra Earring +1",ear2="Lugra Earring",}
 	sets.AccMaxTP = {ear1="Zennaroi Earring",ear2="Telos Earring"}
 	sets.AccDayMaxTPWSEars = {ear1="Zennaroi Earring",ear2="Telos Earring"}
-	sets.DayMaxTPWSEars = {ear1="Ishvara Earring",ear2="Brutal Earring",}
+	sets.DayMaxTPWSEars = {ear1="Hoxne Earring",ear2="Brutal Earring",}
 	sets.AccDayWSEars = {ear1="Zennaroi Earring",ear2="Telos Earring"}
 	sets.DayWSEars = {ear1="Brutal Earring",ear2="Moonshade Earring"}
 

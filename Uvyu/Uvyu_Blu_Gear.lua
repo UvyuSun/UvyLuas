@@ -8,7 +8,7 @@ function user_setup()
 	state.PhysicalDefenseMode:options('PDT')
 	state.MagicalDefenseMode:options('MDT')
 	state.ResistDefenseMode:options('MEVA')
-	state.Weapons:options('None','Mag','Naeg','Tiz')
+	state.Weapons:options('None','Naeg','Tiz','Mag')
 
     state.ExtraMeleeMode = M{['description']='Extra Melee Mode','None','MP','SuppaBrutal','DWEarrings','DWMax'}
 
@@ -106,7 +106,7 @@ function init_gear_sets()
     neck={ name="Loricate Torque +1", augments={'Path: A',}},
     waist={ name="Sailfi Belt +1", augments={'Path: A',}},
     left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
-    right_ear="Ishvara Earring",
+    right_ear="Hoxne Earring",
     left_ring="Epaminondas's Ring",
     right_ring="Ephramad's Ring",
     back={ name="Rosmerta's Cape", augments={'STR+20','Accuracy+20 Attack+20','Weapon skill damage +10%',}},
@@ -484,7 +484,7 @@ function init_gear_sets()
 	sets.Self_Refresh = {waist="Gishdubar Sash"}
 
 end
-
+autows_list = {['Naeg']='Savage Blade',['Tiz']='Expacion',['Mag']='Black Halo',}
 -- Select default macro book on initial load or subjob change.
 function select_default_macro_book()
 	-- Default macro set/book

@@ -247,7 +247,7 @@ function init_gear_sets()
     feet={ name="Nyame Sollerets", augments={'Path: B',}},
     neck="Rep. Plat. Medal",
     waist={ name="Sailfi Belt +1", augments={'Path: A',}},
-    left_ear="Ishvara Earring",
+    left_ear="Hoxne Earring",
     right_ear="Thrud Earring", 
     left_ring="Epaminondas's Ring",
     right_ring="Ephramad's Ring",

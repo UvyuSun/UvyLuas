@@ -41,7 +41,7 @@ function init_gear_sets()
     feet={ name="Kaykaus Boots +1", augments={'Mag. Acc.+20','"Cure" potency +6%','"Fast Cast"+4',}},                           --4
     neck={ name="Clr. Torque +2", augments={'Path: A',}},                                                                       --10
     waist="Embla Sash",                                                                                                         --5
-    left_ear="Malignance Earring +1",                                                                                           --2
+    left_ear="Malignance Earring",                                                                                              --4
     right_ear="Loquac. Earring",                                                                                                --2
     left_ring="Rahab Ring",                                                                                                     --2
     right_ring="Kishar Ring",                                                                                                   --4
@@ -58,7 +58,7 @@ function init_gear_sets()
     feet={ name="Nyame Sollerets", augments={'Path: B',}},                                                                      --0  --DT7
     neck={ name="Clr. Torque +2", augments={'Path: A',}},                                                                       --10
     waist="Embla Sash",                                                                                                         --5
-    left_ear="Malignance Earring +1",                                                                                           --4
+    left_ear="Malignance Earring",                                                                                              --4
     right_ear="Loquac. Earring",                                                                                                --2
     left_ring="Defending Ring",                                                                                                 --0  --DT10
     right_ring="Kishar Ring",                                                                                                   --4

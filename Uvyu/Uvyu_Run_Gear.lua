@@ -306,7 +306,7 @@ function init_gear_sets()
     feet={ name="Nyame Sollerets", augments={'Path: B',}},
     neck="Anu Torque",
     waist={ name="Sailfi Belt +1", augments={'Path: A',}},
-    left_ear="Ishvara Earring",
+    left_ear="Hoxne Earring",
     right_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
     left_ring="Karieyh Ring +1",
     right_ring="Epaminondas's Ring",
@@ -336,7 +336,7 @@ function init_gear_sets()
     feet={ name="Nyame Sollerets", augments={'Path: B',}},
     neck="Rep. Plat. Medal",
     waist={ name="Sailfi Belt +1", augments={'Path: A',}},
-    left_ear="Ishvara Earring",
+    left_ear="Hoxne Earring",
     right_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
     left_ring="Regal Ring",
     right_ring="Niqmaddu Ring",
@@ -466,19 +466,20 @@ function init_gear_sets()
     back={ name="Ogma's Cape", augments={'VIT+20','Eva.+20 /Mag. Eva.+20','VIT+10','Enmity+10','DEF+50',}},
 }	
     sets.midcast['Crusade'] = {
+    ammo="Staunch Tathlum +1",
     head="Erilaz Galea +3",
-    body={ name="Nyame Mail", augments={'Path: B',}},
-	hands="Regal Gauntlets",
+    body="Adamantite Armor",
+    hands="Regal Gauntlets",
     legs={ name="Futhark Trousers +3", augments={'Enhances "Inspire" effect',}},
-    feet={ name="Nyame Sollerets", augments={'Path: B',}},
-    neck={ name="Loricate Torque +1", augments={'Path: A',}},
-    waist={ name="Sailfi Belt +1", augments={'Path: A',}},
-    left_ear="Arete del Luna +1",
-    right_ear="Odnowa Earring +1",
-    left_ring={ name="Gelatinous Ring +1", augments={'Path: A',}},
-    right_ring="Evanescence Ring",
-    back={ name="Ogma's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Phys. dmg. taken-10%',}},
-}
+    feet={ name="Agwu's Pigaches", augments={'Path: A',}},
+    neck="Moonlight Necklace",
+    waist="Audumbla Sash",
+    left_ear="Magnetic Earring",
+    right_ear={ name="Odnowa Earring +1", augments={'Path: A',}},
+    left_ring="Defending Ring",
+    right_ring="Murky Ring",
+    back={ name="Ogma's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','Magic Damage +10','Spell interruption rate down-10%',}},
+}	
     sets.midcast['Temper'] = {
     ammo="Staunch Tathlum +1",
     head={ name="Carmine Mask +1", augments={'Accuracy+20','Mag. Acc.+12','"Fast Cast"+4',}},
@@ -507,8 +508,8 @@ function init_gear_sets()
     waist="Sroda Belt",
     left_ear="Sanare Earring",
     right_ear={ name="Erilaz Earring +1", augments={'System: 1 ID: 1676 Val: 0','Accuracy+12','Mag. Acc.+12','Damage taken-4%',}},
-    left_ring="Murky Ring",
-    right_ring="Defending Ring",
+    left_ring="Defending Ring",
+    right_ring="Murky Ring",
     back={ name="Ogma's Cape", augments={'VIT+20','Eva.+20 /Mag. Eva.+20','VIT+10','Enmity+10','DEF+50',}},
 }
 	sets.midcast['Refresh'] = {
@@ -522,8 +523,8 @@ function init_gear_sets()
     waist="Audumbla Sash",
     left_ear="Magnetic Earring",
     right_ear={ name="Odnowa Earring +1", augments={'Path: A',}},
-    left_ring="Murky Ring",
-    right_ring="Defending Ring",
+    left_ring="Defending Ring",
+    right_ring="Murky Ring",
     back={ name="Ogma's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','Magic Damage +10','Spell interruption rate down-10%',}},
 }	
     sets.midcast.Stoneskin = {
@@ -552,8 +553,8 @@ function init_gear_sets()
     waist="Audumbla Sash",
     left_ear="Magnetic Earring",
     right_ear={ name="Odnowa Earring +1", augments={'Path: A',}},
-    left_ring="Murky Ring",
-    right_ring="Defending Ring",
+    left_ring="Defending Ring",
+    right_ring="Murky Ring",
     back={ name="Ogma's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','Magic Damage +10','Spell interruption rate down-10%',}},
 }
 	sets.midcast.BarElement = {
@@ -567,8 +568,8 @@ function init_gear_sets()
     waist="Audumbla Sash",
     left_ear="Magnetic Earring",
     right_ear={ name="Odnowa Earring +1", augments={'Path: A',}},
-    left_ring="Murky Ring",
-    right_ring="Defending Ring",
+    left_ring="Defending Ring",
+    right_ring="Murky Ring",
     back={ name="Ogma's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','Magic Damage +10','Spell interruption rate down-10%',}},
 }
 		
@@ -583,8 +584,8 @@ function init_gear_sets()
     waist="Audumbla Sash",
     left_ear="Magnetic Earring",
     right_ear={ name="Odnowa Earring +1", augments={'Path: A',}},
-    left_ring="Murky Ring",
-    right_ring="Defending Ring",
+    left_ring="Defending Ring",
+    right_ring="Murky Ring",
     back={ name="Ogma's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','Magic Damage +10','Spell interruption rate down-10%',}},
 }
 	sets.midcast.Flash = set_combine(sets.Enmity, {})
@@ -609,8 +610,8 @@ function init_gear_sets()
     waist="Audumbla Sash",
     left_ear="Magnetic Earring",
     right_ear={ name="Odnowa Earring +1", augments={'Path: A',}},
-    left_ring="Murky Ring",
-    right_ring="Defending Ring",
+    left_ring="Defending Ring",
+    right_ring="Murky Ring",
     back={ name="Ogma's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','Magic Damage +10','Spell interruption rate down-10%',}},
 }
 	sets.midcast['Wild Carrot'] = set_combine(sets.Enmity.SIRD, {})
@@ -647,8 +648,8 @@ function init_gear_sets()
     waist="Plat. Mog. Belt",
     left_ear="Alabaster Earring",
     right_ear={ name="Odnowa Earring +1", augments={'Path: A',}},
-    left_ring="Murky Ring",
-    right_ring="Defending Ring",
+    left_ring="Defending Ring",
+    right_ring="Murky Ring",
     back={ name="Ogma's Cape", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','"Fast Cast"+10','Phys. dmg. taken-10%',}},
 }
 	sets.Protect_Received ={right_ring="Sheltered Ring",}	
@@ -672,8 +673,8 @@ function init_gear_sets()
     waist="Flume Belt +1",
     left_ear={ name="Alabaster Earring", augments={'Path: A',}},
     right_ear={ name="Odnowa Earring +1", augments={'Path: A',}},
-    left_ring={ name="Gelatinous Ring +1", augments={'Path: A',}},
-    right_ring="Fortified Ring",
+    left_ring="Jotnar Ring",
+    right_ring={ name="Gelatinous Ring +1", augments={'Path: A',}},
     back={ name="Ogma's Cape", augments={'VIT+20','Eva.+20 /Mag. Eva.+20','VIT+10','Enmity+10','DEF+50',}},
 }
     sets.idle.Town = {
@@ -683,13 +684,13 @@ function init_gear_sets()
     head="Maat's Cap",
     body="Ashera Harness",
     hands="Regal Gauntlets",
-    legs="Volte Tights",
+    legs={ name="Nyame Flanchard", augments={'Path: B',}},
     feet={ name="Agwu's Pigaches", augments={'Path: A',}},
     neck="Moonlight Necklace",
     waist="Sroda Belt",
-    left_ear="Eabani Earring",
+    left_ear={ name="Alabaster Earring", augments={'Path: A',}},
     right_ear={ name="Odnowa Earring +1", augments={'Path: A',}},
-    left_ring="Moonlight Ring",
+    left_ring="Chirich Ring +1",
     right_ring="Moonlight Ring",
     back="Moonlight Cape",
 }
@@ -722,7 +723,7 @@ function init_gear_sets()
     left_ear="Arete del Luna +1",
     right_ear="Hearty Earring",
     left_ring={ name="Gelatinous Ring +1", augments={'Path: A',}},
-    right_ring="Defending Ring",
+    right_ring="Murky Ring",
     back={ name="Ogma's Cape", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','"Fast Cast"+10','Phys. dmg. taken-10%',}},
 }
 	sets.Kiting = {legs="Carmine Cuisses +1"}

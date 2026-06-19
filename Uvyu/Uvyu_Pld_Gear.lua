@@ -229,7 +229,7 @@ function init_gear_sets()
     legs={ name="Founder's Hose", augments={'MND+5','Mag. Acc.+13',}},
     feet={ name="Odyssean Greaves", augments={'"Blood Boon"+3','Spell interruption rate down -10%','"Store TP"+2','Accuracy+8 Attack+8','Mag. Acc.+18 "Mag.Atk.Bns."+18',}},
     neck="Loricate Torque +1",
-    waist="Audumbla Sash",
+    waist="Flume Belt +1",
     left_ear="Odnowa Earring +1",
     right_ear={ name="Chev. Earring +2", augments={'System: 1 ID: 1676 Val: 0','Accuracy+16','Mag. Acc.+16','Damage taken-6%','STR+7 VIT+7',}},
     left_ring="Defending Ring",
@@ -289,9 +289,6 @@ function init_gear_sets()
     right_ring="Ephramad's Ring",
     back="Null Shawl",
 }
-	sets.precast.WS['Chant du Cygne'] = set_combine(sets.precast.WS, {})
-	sets.precast.WS['Savage Blade'] = set_combine(sets.precast.WS, {})
-	sets.precast.WS['Flat Blade'] = set_combine(sets.precast.WS, {})
     sets.precast.WS['Sanguine Blade'] = {
     ammo="Pemphredo Tathlum",
     head={ name="Nyame Helm", augments={'Path: B',}},
@@ -338,15 +335,6 @@ function init_gear_sets()
     back={ name="Rudianos's Mantle", augments={'STR+20','Accuracy+20 Attack+20','Weapon skill damage +10%','Phys. dmg. taken-10%',}},
 }
     sets.precast.WS['Spirits Within'] = sets.precast.WS['Atonement']
-
-    sets.precast.WS.Acc = {}	
-    sets.precast.WS['Requiescat'].Acc = set_combine(sets.precast.WS.Acc, {})
-    sets.precast.WS['Chant du Cygne'].Acc = set_combine(sets.precast.WS.Acc, {})
-    sets.precast.WS['Savage Blade'].Acc = set_combine(sets.precast.WS.Acc, {})
-	sets.precast.WS['Flat Blade'].Acc = {}
-	sets.precast.WS['Sanguine Blade'].Acc = sets.precast.WS['Sanguine Blade']
-    sets.precast.WS['Spirits Within'].Acc = sets.precast.WS['Atonement']
-
 	-- Swap to these on Moonshade using WS if at 3000 TP
 	sets.MaxTP = {ear1="Cessance Earring",ear2="Brutal Earring",}
 	sets.AccMaxTP = {ear1="Crepuscular Earring",ear2="Telos Earring"}
@@ -725,7 +713,7 @@ function init_gear_sets()
     waist="Flume Belt +1",
     left_ear="Odnowa Earring +1",
     right_ear={ name="Chev. Earring +2", augments={'System: 1 ID: 1676 Val: 0','Accuracy+16','Mag. Acc.+16','Damage taken-6%','STR+7 VIT+7',}},
-    left_ring="Fortified Ring",
+    left_ring="Jotnar Ring",
     right_ring="Gelatinous Ring +1",
     back={ name="Rudianos's Mantle", augments={'VIT+20','Eva.+20 /Mag. Eva.+20','VIT+10','Enmity+10','DEF+50',}},
 }
@@ -773,7 +761,7 @@ function init_gear_sets()
     waist="Flume Belt +1",
     left_ear="Odnowa Earring +1",
     right_ear={ name="Chev. Earring +2", augments={'System: 1 ID: 1676 Val: 0','Accuracy+16','Mag. Acc.+16','Damage taken-6%','STR+7 VIT+7',}},
-    left_ring="Fortified Ring",
+    left_ring="Jotnar Ring",
     right_ring="Gelatinous Ring +1",
     back={ name="Rudianos's Mantle", augments={'VIT+20','Eva.+20 /Mag. Eva.+20','VIT+10','Enmity+10','DEF+50',}},
 }

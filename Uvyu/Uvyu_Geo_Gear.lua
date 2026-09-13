@@ -35,12 +35,15 @@ function init_gear_sets()
     feet="Volte Boots",
     waist="Chaac Belt",
 }
+    sets.precast.Item['Holy Water'] = {
+    neck="Nicander's Necklace",
+}
 
 	-- Precast sets to enhance JAs
 	sets.precast.JA.Bolster = {body="Bagua Tunic +3"}
 	sets.precast.JA['Life Cycle'] = {body="Geo. Tunic +3",back={ name="Nantosuelta's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10','Phys. dmg. taken-10%',}},}
-	sets.precast.JA['Radial Arcana'] = {feet="Bagua Sandals +3"}
-	sets.precast.JA['Mending Halation'] = {legs="Bagua Pants +3"}
+	sets.precast.JA['Radial Arcana'] = {head="Bagua Galero",feet="Bagua Sandals +3"}
+	sets.precast.JA['Mending Halation'] = {head="Bagua Galero",legs="Bagua Pants +3"}
 	sets.precast.JA['Concentric Pulse'] = {head="Bagua Galero +3"}
 	sets.precast.JA['Full Circle'] = {head="Azimuth Hood +3",hands="Bagua Mitaines +3"}
 	
@@ -77,13 +80,13 @@ function init_gear_sets()
     right_ring="Kishar Ring",                                                                                                               --2
     back={ name="Nantosuelta's Cape", augments={'HP+60','Mag. Acc+20 /Mag. Dmg.+20','Mag. Acc.+10','"Fast Cast"+10','Damage taken-5%',}},   --10
 }                                                                                                                                           --Total FC 80%
-	
+
 	sets.precast.FC.Curaga = sets.precast.FC.Cure
-	
+
 	sets.Self_Healing = {waist="Gishdubar Sash"}
 	sets.Cure_Received = {waist="Gishdubar Sash"}
 	sets.Self_Refresh = {waist="Gishdubar Sash"}
-	
+
     sets.precast.FC['Enhancing Magic'] = set_combine(sets.precast.FC, {})
     sets.precast.FC['Enfeebling Magic'] = set_combine(sets.precast.FC, {})
     sets.precast.FC['Elemental Magic'] = set_combine(sets.precast.FC, {})
@@ -205,7 +208,7 @@ function init_gear_sets()
     neck="Rep. Plat. Medal",
     waist="Prosilio Belt +1",
     left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
-    right_ear="Regal Earring",
+    left_ear={ name="Alabaster Earring", augments={'Path: A',}},
     left_ring="Epaminondas's Ring",
     right_ring={ name="Metamor. Ring +1", augments={'Path: A',}},
     back={ name="Nantosuelta's Cape", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Damage taken-5%',}},
@@ -225,11 +228,9 @@ function init_gear_sets()
     right_ring="Ephramad's Ring",
     back={ name="Nantosuelta's Cape", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Damage taken-5%',}},
 }
-
 	--------------------------------------
 	-- Midcast sets
 	--------------------------------------
-
     sets.midcast.FastRecast = {
     ammo="Staunch Tathlum +1",
     head={ name="Merlinic Hood", augments={'Mag. Acc.+2','"Fast Cast"+7',}},                                                                --15
@@ -286,16 +287,16 @@ function init_gear_sets()
     ammo="Staunch Tathlum +1",
     head={ name="Vanya Hood", augments={'Healing magic skill +20','"Cure" spellcasting time -7%','Magic dmg. taken -3',}},
     body={ name="Vanya Robe", augments={'Healing magic skill +20','"Cure" spellcasting time -7%','Magic dmg. taken -3',}},
-    hands={ name="Telchine Gloves", augments={'"Conserve MP"+5','Enh. Mag. eff. dur. +10',}},
+    hands={ name="Vanya Cuffs", augments={'Healing magic skill +20','"Cure" spellcasting time -7%','Magic dmg. taken -3',}},
     legs={ name="Vanya Slops", augments={'Healing magic skill +20','"Cure" spellcasting time -7%','Magic dmg. taken -3',}},
     feet={ name="Vanya Clogs", augments={'Healing magic skill +20','"Cure" spellcasting time -7%','Magic dmg. taken -3',}},
-    neck="Incanter's Torque",
-    waist="Hachirin-no-Obi",
-    left_ear="Regal Earring",
-    right_ear="Odnowa Earring +1",
+    neck="Hoxne Torque",
+    waist="Embla Sash",
+    left_ear={ name="Alabaster Earring", augments={'Path: A',}},
+    right_ear="Regal Earring",
     left_ring="Stikini Ring +1",
-    right_ring="Stikini Ring +1",
-    back="Moonlight Cape",
+    right_ring="Menelaus's Ring",
+    back={ name="Nantosuelta's Cape", augments={'HP+60','Mag. Acc+20 /Mag. Dmg.+20','Mag. Acc.+10','"Fast Cast"+10','Damage taken-5%',}},
 }
     sets.midcast.LightWeatherCure = {
     main="Daybreak",
@@ -335,24 +336,27 @@ function init_gear_sets()
     sets.midcast.Curaga = sets.midcast.Cure
 
 	sets.midcast.Cursna = {
+    main={ name="Gada", augments={'Indi. eff. dur. +11','MND+5','"Mag.Atk.Bns."+17',}},
+    sub="Ammurapi Shield",
+    ammo="Staunch Tathlum +1",
     head={ name="Vanya Hood", augments={'Healing magic skill +20','"Cure" spellcasting time -7%','Magic dmg. taken -3',}},
-    hands="Inyan. Dastanas +2",                                                                                                
-    body="Vanya Robe",
-	neck="Debilis Medallion",
+    body={ name="Vanya Robe", augments={'Healing magic skill +20','"Cure" spellcasting time -7%','Magic dmg. taken -3',}},
+    hands="Hieros Mittens",
     legs={ name="Vanya Slops", augments={'Healing magic skill +20','"Cure" spellcasting time -7%','Magic dmg. taken -3',}},
     feet={ name="Vanya Clogs", augments={'Healing magic skill +20','"Cure" spellcasting time -7%','Magic dmg. taken -3',}},
-    neck="Debilis Medallion",
-    waist="Bishop's Sash",
-    left_ear="Magnetic Earring",
-    right_ear="Meili Earring",
-    left_ring="Haoma's Ring",
+    neck="Hoxne Torque",
+    waist="Embla Sash",
+    left_ear={ name="Alabaster Earring", augments={'Path: A',}},
+    right_ear="Magnetic Earring",
+    left_ring="Stikini Ring +1",
     right_ring="Menelaus's Ring",
+    back={ name="Nantosuelta's Cape", augments={'HP+60','Mag. Acc+20 /Mag. Dmg.+20','Mag. Acc.+10','"Fast Cast"+10','Damage taken-5%',}},
 }
 	sets.midcast.StatusRemoval = set_combine(sets.midcast.FastRecast, {})
 	
     sets.midcast['Elemental Magic'] = {
-    main={ name="Bunzi's Rod", augments={'Path: A',}},
-    sub="Maxentius",
+    main={ name="Idris", augments={'Path: A',}},
+    sub={ name="Bunzi's Rod", augments={'Path: A',}},
     ammo={ name="Ghastly Tathlum +1", augments={'Path: A',}},
     head={ name="Agwu's Cap", augments={'Path: A',}},
     body="Azimuth Coat +3",
@@ -368,8 +372,8 @@ function init_gear_sets()
     back={ name="Nantosuelta's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10','Phys. dmg. taken-10%',}},
 }	
     sets.midcast['Elemental Magic'].Burst = {
-    main={ name="Bunzi's Rod", augments={'Path: A',}},
-    sub="Maxentius",
+    main={ name="Idris", augments={'Path: A',}},
+    sub={ name="Bunzi's Rod", augments={'Path: A',}},
     ammo={ name="Ghastly Tathlum +1", augments={'Path: A',}},
     head="Ea Hat +1",
     body="Azimuth Coat +3",
@@ -391,9 +395,9 @@ function init_gear_sets()
     hands={ name="Merlinic Dastanas", augments={'"Mag.Atk.Bns."+17','"Occult Acumen"+11',}},
     legs="Perdition Slops",
     feet={ name="Merlinic Crackows", augments={'Attack+14','"Occult Acumen"+11','CHR+9','Mag. Acc.+2',}},
-    neck="Incanter's Torque",
+    neck="Rep. Plat. Medal",
     waist="Oneiros Rope",
-    left_ear="Telos Earring",
+    left_ear={ name="Alabaster Earring", augments={'Path: A',}},
     right_ear="Dedition Earring",
     left_ring="Chirich Ring +1",
     right_ring="Chirich Ring +1",
@@ -478,7 +482,7 @@ function init_gear_sets()
     right_ring="Kishar Ring",
     back={ name="Nantosuelta's Cape", augments={'HP+60','Mag. Acc+20 /Mag. Dmg.+20','Mag. Acc.+10','"Fast Cast"+10','Damage taken-5%',}},
 }
-    sets.midcast.Drain = {
+    sets.midcast.Drain = {	
     ammo="Pemphredo Tathlum",
     head={ name="Bagua Galero +3", augments={'Enhances "Primeval Zeal" effect',}},
     body="Azimuth Coat +3",
@@ -551,9 +555,9 @@ function init_gear_sets()
     hands={ name="Merlinic Dastanas", augments={'"Mag.Atk.Bns."+17','"Occult Acumen"+11',}},
     legs="Perdition Slops",
     feet={ name="Merlinic Crackows", augments={'Attack+14','"Occult Acumen"+11','CHR+9','Mag. Acc.+2',}},
-    neck="Incanter's Torque",
+    neck="Rep. Plat. Medal",
     waist="Oneiros Rope",
-    left_ear="Telos Earring",
+    left_ear={ name="Alabaster Earring", augments={'Path: A',}},
     right_ear="Dedition Earring",
     left_ring="Chirich Ring +1",
     right_ring="Chirich Ring +1",
@@ -685,21 +689,6 @@ function init_gear_sets()
     right_ring="Orvail Ring +1",
     back="Moonlight Cape",
 }
---    main={ name="Idris", augments={'Path: A',}},
---    sub="Ammurapi Shield",
---    ammo="Staunch Tathlum +1",
---    head={ name="Nyame Helm", augments={'Path: B',}},
---    body="Adamantite Armor",
---    hands={ name="Nyame Gauntlets", augments={'Path: B',}},
---    legs={ name="Nyame Flanchard", augments={'Path: B',}},
---    feet={ name="Nyame Sollerets", augments={'Path: B',}},
---    neck={ name="Warder's Charm +1", augments={'Path: A',}},
---    waist="Carrier's Sash",
---    left_ear={ name="Arete del Luna +1", augments={'Path: A',}	},
---    right_ear="Hearty Earring",
---    left_ring="Archon Ring",
---    right_ring="Shadow Ring",
---    back={ name="Nantosuelta's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Damage taken-5%',}},
 	sets.idle = {
     main={ name="Bhima", augments={'Path: B',}},
     sub="Ammurapi Shield",
@@ -746,9 +735,9 @@ function init_gear_sets()
     feet="Mallquis Clogs +2",
     neck="Rep. Plat. Medal",
     waist="Goading Belt",
-    left_ear="Dedition Earring",
-    right_ear="Telos Earring",
-    left_ring="Chirich Ring +1",
+    left_ear={ name="Alabaster Earring", augments={'Path: A',}},
+    right_ear="Dedition Earring",
+    left_ring="Roller's Ring",
     right_ring="Chirich Ring +1",
     back={ name="Nantosuelta's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Damage taken-5%',}},
 }
@@ -763,31 +752,47 @@ function init_gear_sets()
     feet="Mallquis Clogs +2",
     neck="Rep. Plat. Medal",
     waist="Goading Belt",
-    left_ear="Dedition Earring",
-    right_ear="Telos Earring",
-    left_ring="Chirich Ring +1",
+    left_ear={ name="Alabaster Earring", augments={'Path: A',}},
+    right_ear="Dedition Earring",
+    left_ring="Roller's Ring",
     right_ring="Chirich Ring +1",
     back={ name="Nantosuelta's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Damage taken-5%',}},
-}	
-
+}
 --	sets.idle.TPEat = set_combine(sets.idle, {neck="Chrys. Torque"})
 
 	-- .Pet sets are for when Luopan is present.
+--	sets.idle.Pet = {
+--    main={ name="Idris", augments={'Path: A',}},
+--    sub="Ammurapi Shield",
+--    ammo="Staunch Tathlum +1",
+--    head="Azimuth Hood +3",
+--    body="Adamantite Armor",
+--    hands="Geo. Mitaines +4",
+--    legs={ name="Agwu's Slops", augments={'Path: A',}},
+--    feet={ name="Bagua Sandals +4", augments={'Enhances "Radial Arcana" effect',}},
+--    neck={ name="Bagua Charm +2", augments={'Path: A',}},
+--    waist="Isa Belt",
+--    left_ear={ name="Arete del Luna +1", augments={'Path: A',}},
+--    right_ear={ name="Azimuth Earring +1", augments={'System: 1 ID: 1676 Val: 0','Mag. Acc.+14','Damage taken-5%',}},
+--    left_ring="Archon Ring",
+--    right_ring="Shadow Ring",
+--    back={ name="Nantosuelta's Cape", augments={'INT+20','Eva.+20 /Mag. Eva.+20','Pet: "Regen"+10','Pet: "Regen"+5',}},
+--}
 	sets.idle.Pet = {
     main={ name="Idris", augments={'Path: A',}},
     sub="Ammurapi Shield",
     ammo="Staunch Tathlum +1",
     head="Azimuth Hood +3",
-    body="Adamantite Armor",
+    body="Zendik Robe",
     hands="Geo. Mitaines +4",
     legs={ name="Agwu's Slops", augments={'Path: A',}},
-    feet={ name="Bagua Sandals +3", augments={'Enhances "Radial Arcana" effect',}},
+    feet={ name="Bagua Sandals +4", augments={'Enhances "Radial Arcana" effect',}},
     neck={ name="Bagua Charm +2", augments={'Path: A',}},
     waist="Isa Belt",
     left_ear={ name="Arete del Luna +1", augments={'Path: A',}},
     right_ear={ name="Azimuth Earring +1", augments={'System: 1 ID: 1676 Val: 0','Mag. Acc.+14','Damage taken-5%',}},
-    left_ring="Archon Ring",
-    right_ring="Shadow Ring",
+    left_ring="Defending Ring",
+    right_ring="Murky Ring",
     back={ name="Nantosuelta's Cape", augments={'INT+20','Eva.+20 /Mag. Eva.+20','Pet: "Regen"+10','Pet: "Regen"+5',}},
 }
 	sets.idle.DualWield.Pet = {
@@ -798,7 +803,7 @@ function init_gear_sets()
     body="Adamantite Armor",
     hands="Geo. Mitaines +4",
     legs={ name="Agwu's Slops", augments={'Path: A',}},
-    feet={ name="Bagua Sandals +3", augments={'Enhances "Radial Arcana" effect',}},
+    feet={ name="Bagua Sandals +4", augments={'Enhances "Radial Arcana" effect',}},
     neck={ name="Bagua Charm +2", augments={'Path: A',}},
     waist="Isa Belt",
     left_ear={ name="Arete del Luna +1", augments={'Path: A',}},
@@ -1082,7 +1087,7 @@ function init_gear_sets()
     feet={ name="Nyame Sollerets", augments={'Path: B',}},
     neck="Null Loop",
     waist="Null Belt",
-    left_ear="Suppanomimi",
+    left_ear={ name="Alabaster Earring", augments={'Path: A',}},
     right_ear="Eabani Earring",
     left_ring="Chirich Ring +1",
     right_ring="Chirich Ring +1",
@@ -1099,7 +1104,7 @@ function init_gear_sets()
     feet={ name="Nyame Sollerets", augments={'Path: B',}},
     neck="Null Loop",
     waist="Null Belt",
-    left_ear="Suppanomimi",
+    left_ear={ name="Alabaster Earring", augments={'Path: A',}},
     right_ear="Eabani Earring",
     left_ring="Chirich Ring +1",
     right_ring="Chirich Ring +1",
@@ -1116,7 +1121,7 @@ function init_gear_sets()
     feet={ name="Nyame Sollerets", augments={'Path: B',}},
     neck="Null Loop",
     waist="Null Belt",
-    left_ear="Suppanomimi",
+    left_ear={ name="Alabaster Earring", augments={'Path: A',}},
     right_ear="Eabani Earring",
     left_ring="Chirich Ring +1",
     right_ring="Chirich Ring +1",

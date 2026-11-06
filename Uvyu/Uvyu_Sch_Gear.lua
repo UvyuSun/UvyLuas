@@ -533,7 +533,7 @@ function init_gear_sets()
     back={ name="Bookworm's Cape", augments={'INT+2','MND+2','Helix eff. dur. +20','"Regen" potency+10',}},
 }
 	sets.midcast['Luminohelix II'] = {
-    main={ name="Bunzi's Rod", augments={'Path: A',}},
+    main="Daybreak",
     sub="Culminus",
     ammo={ name="Ghastly Tathlum +1", augments={'Path: A',}},
     head="Arbatel Bonnet +3",
